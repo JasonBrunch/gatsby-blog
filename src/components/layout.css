@@ -1,0 +1,172 @@
+/* layout.css */
+/* Global style settings */
+:root {
+    --background-color: #F3F3F3; /* Light gray for general backgrounds */
+    --brand-color: #e54927; /* Bright blue for brand-specific elements */
+    --dark-text: #30353D; /* Nearly black for dark text */
+    --medium-text: #677282; /* Very light gray for light text */
+    --light-text: #7E899A; /* Pure white for the lightest text */
+}
+/* Set the root element to take up the full width and height of the viewport */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set the body element to have a minimum height of the viewport */
+body {
+    min-height: 100vh;
+}
+
+/* Set the background color to red */
+body {
+    background-color: var(--background-color);
+
+}
+
+
+
+
+/*TYPOGRAPHY*/
+h3{
+    font-family: "almarai", sans-serif;
+    font-size: 1.5rem;
+    color: var(--dark-text);
+    margin: 0;
+    padding: 0;
+}
+h4{
+    font-family: "almarai", sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+}
+
+
+
+
+.debug{
+    border: 1px solid greenyellow;
+}
+.debug2{
+    border: 1px solid rgb(255, 0, 200);
+}
+.navbar-container{
+display: flex;
+padding: 0 5%;
+   
+}
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+    background-color: white;
+    width: 100%;
+    z-index: 1000;
+    border-radius: 6px;
+    box-shadow: 0 6px 14px 0 rgba(36, 41, 45, 0.05);
+    margin-top: 2%;
+    box-sizing: border-box;
+}
+.logo-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.circle{
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: var(--brand-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.CTA{
+    border-radius: 6px;
+    padding: 0;
+    background-color: var(--brand-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.mail-svg{
+    width: 20px;
+    height: auto;
+
+
+}
+
+.image-container {
+    margin-top: 5rem;
+  
+    width: 100vw; /* Full width of the viewport */
+
+    height: 75vh; /* Maximum height of the container */
+    padding: 0 5%; /* Padding reduces the space for the child */
+    box-sizing: border-box; /* Includes padding and border in the dimensions */
+    display: flex;
+    align-items: center; /* Centers children vertically */
+    justify-content: center; /* Centers children horizontally */
+    position: relative; /* For positioning children absolutely inside if needed */
+    
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        margin-top: 0.5rem;
+        height: 25vh;
+    }
+}
+
+.background-image {
+    background-color: aquamarine;
+    background-size: cover;  /* Cover the entire area of the div */
+    background-position: 50% 1vh; /* Horizontal center, 10vh from the top of the viewport */
+    background-repeat: no-repeat;  /* Do not repeat the image */
+    background-attachment: fixed;
+    width: 100%; /* Full width, respecting container's padding */
+    height: 100%; /* Full height, respecting container's padding */
+    display: flex;
+    align-items: center; /* Center the SVG vertically */
+    justify-content: center; /* Center the SVG horizontally */
+    padding: 7% 10% 20% 10%; /* Inner padding for content */
+    box-sizing: border-box; /* Padding included in the dimensions */
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 6px 14px 0 rgba(36, 41, 45, 0.05);
+}
+@media (max-width: 768px) {
+    .background-image {
+        background-position: 50% -32vh; /* Horizontal center, 10vh from the top of the viewport */
+        padding: 0% 10% 0% 10%; /* Inner padding for content */
+    }
+}
+
+.journal-svg {
+    width: 70%; /* Width relative to its parent `.background-image` */
+    height: auto; /* Keeps the aspect ratio of the SVG */
+
+    fill: var(--dark-text);
+
+}
+
+
+@media (max-width: 768px) {
+    .journal-svg {
+        width: 125%;
+    
+    }
+}
