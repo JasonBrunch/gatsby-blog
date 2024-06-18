@@ -14,18 +14,26 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        "name": "images",
-        "path": "./src/images/"
+        name: "images",
+        path: "./src/images/"
       },
       __key: "images"
     }, 
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        "name": "pages",
-        "path": "./src/pages/"
+        name: "pages",
+        path: "./src/pages/"
       },
       __key: "pages"
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: "blog",
+        path: `${__dirname}/content/blog/`
+      },
+      __key: "blog"
     },
     {
       resolve: "gatsby-plugin-react-svg",
@@ -34,6 +42,7 @@ module.exports = {
           include: /assets/ // Ensure your SVG files are in the 'assets' directory
         }
       }
-    }
+    },
+    "gatsby-transformer-remark" // Add this line to include the Markdown transformer
   ]
 };
