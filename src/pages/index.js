@@ -6,50 +6,54 @@ import beachImage from "../images/beach-concept.jpg";
 import JournalSVG from "../assets/journal.svg";
 import MailSVG from "../assets/mail.svg";
 import QuoteSVG from "../assets/quote.svg";
+import Footer from "../components/Footer";
 
 const Home = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
     <Layout>
-      <div className="navbar-container debug2">
-        <div className="navbar ">
+      <div className="navbar-container ">
+        <div className="navbar">
           <div className="logo-container">
             <h3>JASON BUNCE</h3>
             <div className="circle"></div>
           </div>
           <button className="CTA">
             <MailSVG className="mail-svg" />
-            <h4>GET IN TOUCH</h4>
+            <h5>GET IN TOUCH</h5>
           </button>
         </div>
       </div>
       <div className="image-container debug">
         <div className="background-image" style={{ backgroundImage: `url(${beachImage})` }}>
-          <JournalSVG className="journal-svg debug2" />
+          <JournalSVG className="journal-svg " />
         </div>
       </div>
       <section className="quote-container debug">
         <QuoteSVG className="quote-svg" />
         <h4>WELCOME TO THE JOURNAL</h4>
       </section>
-      <div className="cards-container">
+      <section className="blog-post-container">
         {posts.map(({ node }) => (
           <Card
             key={node.id}
             title={node.frontmatter.title}
             description={node.frontmatter.description}
             path={node.frontmatter.path}
+            image={node.frontmatter.image.childImageSharp.gatsbyImageData}
           />
         ))}
-      </div>
+      </section>
+      <Footer />
+      
     </Layout>
   );
 };
 
 export const query = graphql`
   {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       edges {
         node {
           id
@@ -57,6 +61,11 @@ export const query = graphql`
             title
             description
             path
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 600, height: 400, layout: FULL_WIDTH)
+              }
+            }
           }
         }
       }
