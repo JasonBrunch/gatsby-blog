@@ -1,3 +1,4 @@
+@import "~locomotive-scroll/dist/locomotive-scroll.css";
 /* layout.css */
 /* Global style settings */
 :root {
@@ -7,13 +8,17 @@
     --medium-text: #677282; /* Very light gray for light text */
     --light-text: #7E899A; /* Pure white for the lightest text */
 }
+
 /* Set the root element to take up the full width and height of the viewport */
 html, body {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
-}
+
+  }
+  
+
 
 /* Set the body element to have a minimum height of the viewport */
 body {
@@ -30,15 +35,16 @@ body {
 
 
 /*TYPOGRAPHY*/
-h1, h3, h4, h5 {
+h1, h3, h4, h5, h6 {
     font-family: "almarai", sans-serif;
-  
     margin: 0;
     padding: 0;
   }
   h1 { font-size: 2.2rem; }
   h3 { font-size: 1.1rem; }
-  h4 { font-size: 14px; font-weight: 600; }
+  h4 { font-size: 0.95rem; }
+  h5{ font-size: 0.8rem;}
+  h6 { font-size: 0.55rem; }
 
 
 
@@ -59,13 +65,13 @@ padding: 0 5%;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 14px 16px;
     background-color: white;
     width: 100%;
     z-index: 1000;
     border-radius: 6px;
     box-shadow: 0 6px 14px 0 rgba(36, 41, 45, 0.05);
-    margin-top: 2%;
+    margin-top: 15px;
     box-sizing: border-box;
 }
 .logo-container{
@@ -106,9 +112,8 @@ padding: 0 5%;
 
 .image-container {
     margin-top: 5rem;
-  
-    width: 100vw; /* Full width of the viewport */
-
+    width: 100%; /* Full width of the viewport */
+    max-width: 100%;
     height: 75vh; /* Maximum height of the container */
     padding: 0 5%; /* Padding reduces the space for the child */
     box-sizing: border-box; /* Includes padding and border in the dimensions */
@@ -118,7 +123,12 @@ padding: 0 5%;
     position: relative; /* For positioning children absolutely inside if needed */
     
 }
-
+@media (max-width: 1024px) {
+    .image-container {
+      margin-top: 2.2rem;
+        height: 35vh;
+    }
+}
 @media (max-width: 768px) {
     .image-container {
         margin-top: 0.5rem;
@@ -142,6 +152,12 @@ padding: 0 5%;
     position: relative;
     border-radius: 20px;
     box-shadow: 0 6px 14px 0 rgba(36, 41, 45, 0.05);
+}
+@media (max-width: 1024px) {
+    .background-image {
+        background-position: 50% -19vh; /* Horizontal center, 10vh from the top of the viewport */
+        padding: 0% 10% 0% 10%; /* Inner padding for content */
+    }
 }
 @media (max-width: 768px) {
     .background-image {
@@ -168,20 +184,30 @@ padding: 0 5%;
 }
 
 .quote-container {
-    margin-top: 10%;
+    margin-top: 10.5%;
     margin-bottom: 8%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0 10%;
-    gap: 40px;
+    gap: 44px;
+}
+.quote-container h4 {
+    color: var(--dark-text);
+    font-weight: 400;
 }
 
 .quote-svg {
     max-width: 70%;
     height: auto;
    
+}
+@media (max-width: 1024px){
+    .quote-svg {
+        max-width: 100%;
+    }
+
 }
 /* Blog post container styles using Flexbox */
 .blog-post-container {
@@ -238,16 +264,24 @@ padding: 0 5%;
 
   /* Footer styles */
 .footer {
+    margin-top: 11%;
     background-color: white;
-    padding: 1rem 5%;
+    padding: 0.7rem 5%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 -6px 14px 0 rgba(36, 41, 45, 0.05);
+    color: var(--light-text);
   }
   .footer-content{
     display: flex;
     flex-direction: row;
     gap: 1rem;
+
+
+  }
+  .footer-content h5{
+    font-weight: 200;
+    color: var(--medium-text);
   }

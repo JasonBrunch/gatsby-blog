@@ -4,11 +4,11 @@ const Footer = () => {
   return (
     <footer className="footer">
         <div className="footer-content">
-          <h4> &copy 2024 Jason Bunce</h4>
-          <h4>Site info</h4>
-          <h4>Data Privacy</h4>
+          <h5>&copy; 2024 Jason Bunce</h5>
+          <h5>Site info</h5>
+          <h5>Data Privacy</h5>
         </div>
-        <h4>BREWED IN THE DESERT OF DUBAI - REFINED IN THE MOUNTAINS OF NEW ZEALAND</h4>
+        <h6>BREWED IN THE DESERT OF DUBAI - REFINED IN THE MOUNTAINS OF NEW ZEALAND</h6>
     </footer>
   );
 }

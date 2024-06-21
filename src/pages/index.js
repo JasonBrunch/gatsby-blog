@@ -25,12 +25,13 @@ const Home = ({ data }) => {
           </button>
         </div>
       </div>
-      <div className="image-container debug">
+      <section className="image-container">
         <div className="background-image" style={{ backgroundImage: `url(${beachImage})` }}>
           <JournalSVG className="journal-svg " />
         </div>
-      </div>
-      <section className="quote-container debug">
+        
+      </section>
+      <section className="quote-container">
         <QuoteSVG className="quote-svg" />
         <h4>WELCOME TO THE JOURNAL</h4>
       </section>
