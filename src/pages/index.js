@@ -8,13 +8,52 @@ import MailSVG from "../assets/mail.svg";
 import QuoteSVG from "../assets/quote.svg";
 import Footer from "../components/Footer";
 
+
+import { useEffect, useState } from "react";
+
 const Home = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
 
+
+
+  /*NAVBAR LOGIC*/
+/* NAVBAR LOGIC */
+const [lastScrollY, setLastScrollY] = useState(0);
+const [navbarVisible, setNavbarVisible] = useState(true);
+
+useEffect(() => {
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+    console.log("Current ScrollY: ", currentScrollY);
+    console.log("Last ScrollY: ", lastScrollY);
+
+    if (currentScrollY < 200) {
+      setNavbarVisible(true);
+    } else {
+      if (currentScrollY > lastScrollY) {
+        setNavbarVisible(false);
+      } else {
+        setNavbarVisible(true);
+      }
+    }
+    setLastScrollY(currentScrollY);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, [lastScrollY]);
+
+
+
+
+
   return (
     <Layout>
-      <div className="navbar-container ">
-        <div className="navbar">
+      <div className={`navbar-container ${navbarVisible ? 'visible' : 'hidden'} debug`}>
+        <div className="navbar debug2">
           <div className="logo-container">
             <h3>JASON BUNCE</h3>
             <div className="circle"></div>
@@ -29,7 +68,6 @@ const Home = ({ data }) => {
         <div className="background-image" style={{ backgroundImage: `url(${beachImage})` }}>
           <JournalSVG className="journal-svg " />
         </div>
-        
       </section>
       <section className="quote-container">
         <QuoteSVG className="quote-svg" />
@@ -47,11 +85,9 @@ const Home = ({ data }) => {
         ))}
       </section>
       <Footer />
-      
     </Layout>
   );
 };
-
 export const query = graphql`
   {
     allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
