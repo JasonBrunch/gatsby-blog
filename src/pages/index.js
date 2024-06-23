@@ -5,9 +5,6 @@ import Card from "../components/Card";
 import beachImage from "../images/beach-concept.jpg";
 import JournalSVG from "../assets/journal.svg";
 import QuoteSVG from "../assets/quote.svg";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-
 import { useEffect, useRef } from "react";
 
 
@@ -57,7 +54,7 @@ const Home = ({ data }) => {
 
   return (
     <Layout>
-     <Navbar/>
+     
       <section className="image-container">
         <div className="background-image" style={{ backgroundImage: `url(${beachImage})` }}>
           <JournalSVG className="journal-svg " />
@@ -80,7 +77,7 @@ const Home = ({ data }) => {
           />
         ))}
       </section>
-      <Footer />
+   
     </Layout>
   );
 };
