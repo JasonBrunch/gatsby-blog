@@ -23,12 +23,28 @@ html, body {
 /* Set the body element to have a minimum height of the viewport */
 body {
     min-height: 100vh;
+
 }
 
 /* Set the background color to red */
 body {
     background-color: var(--background-color);
 
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#root, .app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
 }
 
 
@@ -41,10 +57,27 @@ h1, h3, h4, h5, h6 {
     padding: 0;
   }
   h1 { font-size: 2.2rem; }
-  h3 { font-size: 1.1rem; }
+  h3 { font-size: 1.5rem; }
   h4 { font-size: 0.95rem; }
   h5{ font-size: 0.8rem;}
   h6 { font-size: 0.55rem; }
+
+  @media (max-width: 1024px) {
+    h1 { font-size: 2rem; }
+    h3 { font-size: 1.4rem; }
+    h4 { font-size: 0.9rem; }
+    h5 { font-size: 0.75rem; }
+    h6 { font-size: 0.5rem; }
+  }
+  @media (max-width: 768px) {
+    h1 { font-size: 1.8rem; }
+    h3 { font-size: 1.3rem; }
+    h4 { font-size: 0.85rem; }
+    h5 { font-size: 0.7rem; }
+    h6 { font-size: 0.45rem; }
+  }
+
+
 
 
 
@@ -63,23 +96,43 @@ h1, h3, h4, h5, h6 {
     display: flex;
     justify-content: center; /* Center content horizontally */
     z-index: 1000;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.5s ease-in-out;
     box-sizing: border-box;
+    padding: 2rem 0;
+    
   }
+ 
   
   .navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 14px 16px;
+    padding: 16px 16px;
     background-color: white;
-    width: 90%; /* Adjust width to fit within padding */
-    max-width: 1200px; /* Optional: Max width for better control */
+    width: 90%; 
     border-radius: 6px;
     box-shadow: 0 6px 14px 0 rgba(36, 41, 45, 0.05);
     box-sizing: border-box;
   }
+ @media (max-width: 768px){
+  .navbar-container{
+    padding: 0.5rem 0;
+  }
+    .navbar{
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 10px 16px;
+    }
+    .navbar h3{
+      margin-top: 0;
+      padding: 0;
+      line-height: 1.4rem;
+      
+    }
+  }
+
   
   .navbar-container.hidden {
     transform: translateY(-125%);
@@ -112,7 +165,7 @@ h1, h3, h4, h5, h6 {
     border: 0;
     color: white;
     border: none;
-    padding: 0.5rem 1.5rem;
+    padding: 0.7rem 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -127,6 +180,14 @@ h1, h3, h4, h5, h6 {
     -webkit-user-select: none;
     touch-action: manipulation;
 }
+@media (max-width: 768px){
+    .CTA{
+      padding: 0.6rem 2.5rem;
+    }
+    .CTA h5{
+        font-size: 0.8rem;
+    }
+}
 
 .CTA:hover{
   box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
@@ -139,10 +200,10 @@ h1, h3, h4, h5, h6 {
 }
 
 .image-container {
-    margin-top: 5rem;
+    margin-top: 11rem;
     width: 100%; /* Full width of the viewport */
     max-width: 100%;
-    height: 75vh; /* Maximum height of the container */
+    height: 70vh; /* Maximum height of the container */
     padding: 0 5%; /* Padding reduces the space for the child */
     box-sizing: border-box; /* Includes padding and border in the dimensions */
     display: flex;
@@ -159,15 +220,15 @@ h1, h3, h4, h5, h6 {
 }
 @media (max-width: 768px) {
     .image-container {
-        margin-top: 0.5rem;
+        margin-top: 2.4rem;
         height: 25vh;
     }
 }
 
 .background-image {
-    background-color: aquamarine;
+    background-color: rgb(233, 201, 170);
     background-size: cover;  /* Cover the entire area of the div */
-    background-position: 50% -15vh; /* Horizontal center, 10vh from the top of the viewport */
+    background-position: 50% -12vh; /* Horizontal center, 10vh from the top of the viewport */
     background-repeat: no-repeat;  /* Do not repeat the image */
     background-attachment: fixed;
     width: 100%; /* Full width, respecting container's padding */
@@ -175,7 +236,7 @@ h1, h3, h4, h5, h6 {
     display: flex;
     align-items: center; /* Center the SVG vertically */
     justify-content: center; /* Center the SVG horizontally */
-    padding: 7% 10% 20% 10%; /* Inner padding for content */
+    padding: 7% 10% 10% 10%; /* Inner padding for content */
     box-sizing: border-box; /* Padding included in the dimensions */
     position: relative;
     border-radius: 20px;
@@ -183,13 +244,13 @@ h1, h3, h4, h5, h6 {
 }
 @media (max-width: 1024px) {
     .background-image {
-        background-position: 50% -19vh; /* Horizontal center, 10vh from the top of the viewport */
+        background-position: 50% -30vh; /* Horizontal center, 10vh from the top of the viewport */
         padding: 0% 10% 0% 10%; /* Inner padding for content */
     }
 }
 @media (max-width: 768px) {
     .background-image {
-        background-position: 50% -32vh; /* Horizontal center, 10vh from the top of the viewport */
+        background-position: 50% -34vh; /* Horizontal center, 10vh from the top of the viewport */
         padding: 0% 10% 0% 10%; /* Inner padding for content */
     }
 }
@@ -213,21 +274,28 @@ h1, h3, h4, h5, h6 {
 
 .quote-container {
     margin-top: 10.5%;
-    margin-bottom: 8%;
+    margin-bottom: 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0 10%;
-    gap: 44px;
+    
+    gap: 55px;
 }
 .quote-container h4 {
     color: var(--dark-text);
     font-weight: 400;
 }
 
+@media (max-width: 768px) {
+    .quote-container {
+        margin-bottom: 12% ;
+    }
+}
+
 .quote-svg {
-    max-width: 70%;
+    max-width: 60%;
     height: auto;
    
 }
@@ -238,24 +306,68 @@ h1, h3, h4, h5, h6 {
 
 }
 /* Blog post container styles using Flexbox */
+
+
+/* Ensure the Link fills the entire card-container */
+
 .blog-post-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 3rem;
     padding: 0 5%;
   }
   
   @media (max-width: 1024px) {
     .blog-post-container {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .blog-post-container {
-        grid-template-columns: 1fr;
+      gap: 1rem;
     }
 }
+
+.card-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none; /* Remove default link underline */
+  color: inherit; /* Inherit text color */
+  width: 100%;
+  height: 100%;
+  gap: 0.8rem;
+
+ 
+
+}
+ .card-link h3{
+
+      text-align: center;
+      line-height: 1.5rem;
+   
+  }
+
+
+
+
+
+
+/*MOVING ELEMENTS*/
+/* Move Up Text */
+.move-up-text {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(300px); /* Start slightly below its final position */
+  transition: opacity 0.3s ease-out, transform 1.4s ease-out; /* Smooth transition */
+}
+
+.move-up-text.visible {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Move to its final position */
+}
+
   /************ CARD STYLES *****************/
   .card-container {
     background: transparent;
@@ -265,6 +377,7 @@ h1, h3, h4, h5, h6 {
     align-items: center;
     box-sizing: border-box;
     gap: 1rem;/* Space between card image and text */
+    color: var(--dark-text);
   }
   
   @media (max-width: 1024px) {
@@ -315,4 +428,20 @@ h1, h3, h4, h5, h6 {
   .footer-content h5{
     font-weight: 200;
     color: var(--medium-text);
+  }
+
+  @media (max-width: 1024px) {
+    .footer {
+        margin-top: 20%;
+         flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer-content {
+       
+       
+    }
   }

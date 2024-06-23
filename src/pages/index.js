@@ -4,66 +4,60 @@ import Layout from "../components/layout";
 import Card from "../components/Card";
 import beachImage from "../images/beach-concept.jpg";
 import JournalSVG from "../assets/journal.svg";
-import MailSVG from "../assets/mail.svg";
 import QuoteSVG from "../assets/quote.svg";
 import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+
+import { useEffect, useRef } from "react";
 
 
-import { useEffect, useState } from "react";
+
+
 
 const Home = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
+  const blogPostContainerRef = useRef(null);
 
 
 
-  /*NAVBAR LOGIC*/
-/* NAVBAR LOGIC */
-const [lastScrollY, setLastScrollY] = useState(0);
-const [navbarVisible, setNavbarVisible] = useState(true);
 
-useEffect(() => {
-  const handleScroll = () => {
-    const currentScrollY = window.scrollY;
-    console.log("Current ScrollY: ", currentScrollY);
-    console.log("Last ScrollY: ", lastScrollY);
+  /*TEXT MOVEMENT CODE*/
+  useEffect(() => {
+    const observerOptions = {
+      root: null, // Use the viewport as the root
+      rootMargin: '0px 0px 20% 0px', // Start the animation 20% before the element enters the viewport
+      threshold: 0, // Trigger when any part of the element is visible
+    };
 
-    if (currentScrollY < 200) {
-      setNavbarVisible(true);
-    } else {
-      if (currentScrollY > lastScrollY) {
-        setNavbarVisible(false);
-      } else {
-        setNavbarVisible(true);
-      }
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    if (blogPostContainerRef.current) {
+      observer.observe(blogPostContainerRef.current);
     }
-    setLastScrollY(currentScrollY);
-  };
 
-  window.addEventListener("scroll", handleScroll);
-
-  return () => {
-    window.removeEventListener("scroll", handleScroll);
-  };
-}, [lastScrollY]);
-
+    return () => {
+      if (blogPostContainerRef.current) {
+        observer.unobserve(blogPostContainerRef.current);
+      }
+    };
+  }, []);
 
 
 
 
   return (
     <Layout>
-      <div className={`navbar-container ${navbarVisible ? 'visible' : 'hidden'} debug`}>
-        <div className="navbar debug2">
-          <div className="logo-container">
-            <h3>JASON BUNCE</h3>
-            <div className="circle"></div>
-          </div>
-          <button className="CTA">
-            <MailSVG className="mail-svg" />
-            <h5>GET IN TOUCH</h5>
-          </button>
-        </div>
-      </div>
+     <Navbar/>
       <section className="image-container">
         <div className="background-image" style={{ backgroundImage: `url(${beachImage})` }}>
           <JournalSVG className="journal-svg " />
@@ -73,7 +67,9 @@ useEffect(() => {
         <QuoteSVG className="quote-svg" />
         <h4>WELCOME TO THE JOURNAL</h4>
       </section>
-      <section className="blog-post-container">
+      <section className="blog-post-container move-up-text"
+      ref={blogPostContainerRef}
+      >
         {posts.map(({ node }) => (
           <Card
             key={node.id}
