@@ -1,0 +1,204 @@
+
+.image-container {
+    margin-top: 11rem;
+    width: 100%; /* Full width of the viewport */
+    max-width: 100%;
+    height: 70vh; /* Maximum height of the container */
+    padding: 0 5%; /* Padding reduces the space for the child */
+    box-sizing: border-box; /* Includes padding and border in the dimensions */
+    display: flex;
+    align-items: center; /* Centers children vertically */
+    justify-content: center; /* Centers children horizontally */
+    position: relative; /* For positioning children absolutely inside if needed */
+    
+}
+@media (max-width: 1024px) {
+    .image-container {
+      margin-top: 2.2rem;
+        height: 35vh;
+    }
+}
+@media (max-width: 768px) {
+    .image-container {
+        margin-top: 2.4rem;
+        height: 25vh;
+    }
+}
+
+.background-image {
+    background-color: rgb(233, 201, 170);
+    background-size: cover;  /* Cover the entire area of the div */
+    background-position: 50% -12vh; /* Horizontal center, 10vh from the top of the viewport */
+    background-repeat: no-repeat;  /* Do not repeat the image */
+    background-attachment: fixed;
+    width: 100%; /* Full width, respecting container's padding */
+    height: 100%; /* Full height, respecting container's padding */
+    display: flex;
+    align-items: center; /* Center the SVG vertically */
+    justify-content: center; /* Center the SVG horizontally */
+    padding: 7% 10% 10% 10%; /* Inner padding for content */
+    box-sizing: border-box; /* Padding included in the dimensions */
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 6px 14px 0 rgba(36, 41, 45, 0.05);
+}
+@media (max-width: 1024px) {
+    .background-image {
+        background-position: 50% -30vh; /* Horizontal center, 10vh from the top of the viewport */
+        padding: 0% 10% 0% 10%; /* Inner padding for content */
+    }
+}
+@media (max-width: 768px) {
+    .background-image {
+        background-position: 50% -34vh; /* Horizontal center, 10vh from the top of the viewport */
+        padding: 0% 10% 0% 10%; /* Inner padding for content */
+    }
+}
+
+.journal-svg {
+    width: 70%; /* Width relative to its parent `.background-image` */
+    height: auto; /* Keeps the aspect ratio of the SVG */
+    fill: var(--dark-text);
+}
+.journal-svg .cls-1 {
+    fill: var(--dark-text) !important;
+  }
+
+
+@media (max-width: 768px) {
+    .journal-svg {
+        width: 125%;
+    
+    }
+}
+
+.quote-container {
+    margin-top: 10.5%;
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    
+    gap: 55px;
+}
+.quote-container h4 {
+    color: var(--dark-text);
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .quote-container {
+        margin-bottom: 12% ;
+    }
+}
+
+.quote-svg {
+    max-width: 60%;
+    height: auto;
+   
+}
+@media (max-width: 1024px){
+    .quote-svg {
+        max-width: 100%;
+    }
+
+}
+/* Blog post container styles using Flexbox */
+
+
+/* Ensure the Link fills the entire card-container */
+
+.blog-post-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    padding: 0 5%;
+  }
+  
+  @media (max-width: 1024px) {
+    .blog-post-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-post-container {
+      gap: 1rem;
+    }
+}
+
+.card-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none; /* Remove default link underline */
+  color: inherit; /* Inherit text color */
+  width: 100%;
+  height: 100%;
+  gap: 0.8rem;
+
+ 
+
+}
+ .card-link h3{
+
+      text-align: center;
+      line-height: 1.5rem;
+   
+  }
+
+
+
+
+
+
+/*MOVING ELEMENTS*/
+/* Move Up Text */
+.move-up-text {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(300px); /* Start slightly below its final position */
+  transition: opacity 0.3s ease-out, transform 1.4s ease-out; /* Smooth transition */
+}
+
+.move-up-text.visible {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Move to its final position */
+}
+
+
+
+
+
+  /*BLOG CONTENT*/
+  .main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 16%;
+  }
+  .main-container h1{
+    color: var(--dark-text);
+    font-weight: 500;
+    padding: 0 15%;
+    text-align: center;
+
+  }
+  .main-container .blog-content {
+   
+    color: var(--dark-text);
+    padding: 7% 5%;
+    line-height: 2rem;
+    
+
+  }
+
+   .main-container .blog-content h2 {
+    margin-top: 1.1rem;
+  }
+  .main-container .blog-content p {
+    margin-top: 1.1rem;
+  }

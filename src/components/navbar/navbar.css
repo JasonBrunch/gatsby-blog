@@ -75,6 +75,32 @@
 
 
 }
+
+/*NAV LINKS*/
+.nav-links{
+    display: flex;
+    flex-direction: row;
+
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+
+}
+.nav-link{
+    text-decoration: none;
+    color: var(--dark-text);
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+
+
+
 .CTA{
     border-radius: 6px;
     background-color: var(--brand-color);
