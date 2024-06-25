@@ -1,12 +1,13 @@
 
-import React, {useEffect, useRef} from "react"
-import "./layout.css"
+import React from "react"
+/*import "./layout.css"*/
+import "../styles/global.css"
 import { Helmet } from "react-helmet";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "./navbar/Navbar";
+import Footer from "./footer/Footer";
 
-import LocomotiveScroll from "locomotive-scroll";
-import "locomotive-scroll/dist/locomotive-scroll.css";
+
+
 
 
 const Layout = ({ children }) => (

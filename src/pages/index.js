@@ -1,7 +1,7 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
-import Card from "../components/Card";
+import Card from "../components/cards/Card";
 import beachImage from "../images/beach-concept.jpg";
 import JournalSVG from "../assets/journal.svg";
 import QuoteSVG from "../assets/quote.svg";

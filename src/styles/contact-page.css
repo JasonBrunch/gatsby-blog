@@ -1,0 +1,41 @@
+/*CONTACT PAGE STYLES*/
+.main-contact-container{
+    padding: 10% 5%;
+    color: var(--dark-text);
+  
+  }
+ .contact-container{
+    display: flex;
+    flex-direction:column;
+    padding: 4rem 1.5rem 2rem 1.5rem;
+    background-color: white;
+    gap: 2.5rem;
+    border-radius: 14px;
+  
+  }
+  .contact-text-container{
+    color: var(--dark-text);
+    line-height: 2.5rem;
+    padding-right: 1rem;
+
+  }
+
+  .contact-image-container h3{
+    font-weight: 400;
+    color: var(--dark-text);
+    line-height: 1.5rem;
+   
+  }
+  .email-link {
+    color: var(--email-link-color); /* Replace with your desired color variable or value */
+    text-decoration: none; /* Remove underline if desired */
+
+}
+
+.email-link:hover {
+    color: var(--email-link-hover-color); /* Replace with your desired hover color */
+    text-decoration: underline; /* Add underline on hover if desired */
+}
+.contact-image{
+  border-radius: 14px;
+}

@@ -1,0 +1,33 @@
+  /* Footer styles */
+  .footer {
+    background-color: white;
+    padding: 0.7rem 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 -6px 14px 0 rgba(36, 41, 45, 0.05);
+    color: var(--light-text);
+  }
+  .footer-content{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+
+  }
+  .footer-content h5{
+    font-weight: 200;
+    color: var(--medium-text);
+  }
+
+
+
+  @media (max-width: 768px) {
+    .footer-content {
+       flex-direction: column;
+       gap: 0.5rem;
+       align-items: flex-start;
+       
+    }
+  }

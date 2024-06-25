@@ -1,0 +1,116 @@
+.navbar-container {
+    position: fixed; /* or position: sticky; for sticky behavior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    z-index: 1000;
+    transition: transform 0.5s ease-in-out;
+    box-sizing: border-box;
+    padding: 2rem 0;
+    
+  }
+ 
+  
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    background-color: white;
+    width: 90%; 
+    border-radius: 6px;
+    box-shadow: 0 6px 14px 0 rgba(36, 41, 45, 0.05);
+    box-sizing: border-box;
+  }
+
+@media (max-width: 1024px) {
+.navbar-container{
+  padding: 1rem 0;
+}
+  }
+ @media (max-width: 768px){
+  .navbar-container{
+    padding: 0.5rem 0;
+  }
+    .navbar{
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 10px 16px;
+    }
+    .navbar h3{
+      margin-top: 0;
+      padding: 0;
+      line-height: 1.4rem;
+      
+    }
+  }
+
+  
+  .navbar-container.hidden {
+    transform: translateY(-125%);
+  }
+  
+  .navbar-container.visible {
+    transform: translateY(0);
+  }
+.logo-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--dark-text);
+}
+.circle{
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    background-color: var(--brand-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.CTA{
+    border-radius: 6px;
+    background-color: var(--brand-color);
+    border: 0;
+    color: white;
+    border: none;
+    padding: 0.6rem 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    cursor: pointer;
+    outline: transparent;
+    text-decoration: none;
+
+    transition: box-shadow .2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+@media (max-width: 768px){
+    .CTA{
+      padding: 0.6rem 2.5rem;
+    }
+    .CTA h5{
+        font-size: 0.8rem;
+    }
+}
+
+.CTA:hover{
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+.mail-svg{
+    width: 20px;
+    height: auto;
+
+
+}

@@ -1,7 +1,8 @@
 import * as React from "react";
-import MailSVG from "../assets/mail.svg";
+import MailSVG from "../../assets/mail.svg";
 import { useEffect, useState } from "react";
 import { Link } from "gatsby";
+import "./Navbar.css";
 
 
 const Navbar = ({ data }) => {
