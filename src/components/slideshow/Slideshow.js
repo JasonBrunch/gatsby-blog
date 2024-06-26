@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import './slideshow.css';
 
 const Slideshow = ({ slides, slideDuration = 5000, fadeDuration = 500 }) => {
@@ -21,13 +22,13 @@ const Slideshow = ({ slides, slideDuration = 5000, fadeDuration = 500 }) => {
 
   return (
     <div className="slideshow-container">
-      <img
-        src={slides[nextSlide].imageUrl}
+      <GatsbyImage
+        image={slides[nextSlide].imageUrl}
         alt={slides[nextSlide].altText}
         className="slideshow-image waiting-slide"
       />
-      <img
-        src={slides[currentSlide].imageUrl}
+      <GatsbyImage
+        image={slides[currentSlide].imageUrl}
         alt={slides[currentSlide].altText}
         className={`slideshow-image ${fade ? 'fade-in' : 'fade-out'}`}
         style={{ transition: `opacity ${fadeDuration}ms ease-in-out` }}
