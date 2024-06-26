@@ -1,6 +1,5 @@
   /************ CARD STYLES *****************/
   .card2-container {
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -9,13 +8,28 @@
     gap: 1rem;/* Space between card image and text */
     color: var(--dark-text);
     background-color: transparent;
+    border-radius: 14px;
+    padding: 10px;
+  }
 
+  .card2-container:hover {
+    background-color: rgba(0, 0, 0, 0.031); /* Slightly darker tint with opacity */
   }
   .card2-link{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    gap: 0.8rem;
+        text-decoration: none;
+    color: inherit; /* Ensure the link color doesn't override text color */
+  }
+ 
+  
+  .card2-link h5,
+  .card2-link p {
+    text-decoration: none;
+    color: inherit; /* Ensure the link color doesn't override text color */
   }
 
   .card-container h5{

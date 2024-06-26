@@ -8,7 +8,7 @@ const ButtonGlow = ({ text, onClick }) => {
     return (
         <Link to={onClick} className="CTA">
             <MailSVG className="mail-svg" />
-            <h5>{text}</h5>
+            {text}
         </Link>
     );
 };

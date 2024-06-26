@@ -42,22 +42,25 @@ const Navbar = ({ data }) => {
     <div className={`navbar-container ${navbarVisible ? 'visible' : 'hidden'}`}>
       <div className="navbar">
         <div className="logo-container">
-          <h3>JASON BUNCE</h3>
+          <h6>JASON BUNCE</h6>
           <div className="circle"></div>
         </div>
 
       <div className="nav-links">
         <Link to="/" className="nav-link">
-          <h5>PORTFOLIO</h5>
+          <h6>PORTFOLIO</h6>
         </Link>
         <Link to="/component-library" className="nav-link">
-          <h5>COMPONENTS</h5>
+          <h6>COMPONENTS</h6>
         </Link>
         <Link to="/journal" className="nav-link">
-          <h5>JOURNAL</h5> 
+          <h6>JOURNAL</h6> 
+        </Link>
+        <Link to="/style-page" className="nav-link">
+          <h6>STYLES</h6> 
         </Link>
       </div>
-      <ButtonGlow text="CONTACT" onClick="/contact-page" />
+      <ButtonGlow text="GET IN TOUCH" onClick="/contact-page" />
 
      
       </div>

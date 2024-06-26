@@ -5,8 +5,6 @@
     width: 100%;
     min-height: 100dvh;
     box-sizing: border-box;
-
-
 }
 
 /* Hero text container settings */
@@ -37,9 +35,37 @@
 
 
 }
+.component-card-container{
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
+.horizontal-line{
+    width: 100%;
+   
+    border-top: 1px solid rgb(173, 173, 173)
+    
+}
 .component-card-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 1.5rem;
 }
+
+/*COMPONENT SECTION*/
+.cs-main-container{
+    display: flex;
+    flex-direction: column;
+
+    padding: 20% 5%;
+}
+.display-container {
+    background-color: darkmagenta;
+    width: 100%;
+    height: auto;
+    padding-top: 56.25%;
+    border-radius: 10px;
+  }
+  
