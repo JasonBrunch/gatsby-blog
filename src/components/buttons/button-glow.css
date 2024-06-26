@@ -1,0 +1,45 @@
+.CTA{
+    border-radius: 6px;
+    background-color: var(--brand-color);
+    border: 0;
+    color: white;
+    border: none;
+    padding: 0.6rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    cursor: pointer;
+    outline: transparent;
+    text-decoration: none;
+
+    transition: box-shadow .2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+    max-width: 250px;
+}
+
+.CTA h5{
+  color: white;
+}
+@media (max-width: 768px){
+    .CTA{
+      padding: 0.6rem 2.5rem;
+    }
+    .CTA h5{
+        font-size: 0.8rem;
+    }
+}
+
+.CTA:hover{
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+.mail-svg{
+    width: 20px;
+    height: auto;
+
+
+}

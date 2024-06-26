@@ -3,6 +3,7 @@ import MailSVG from "../../assets/mail.svg";
 import { useEffect, useState } from "react";
 import { Link } from "gatsby";
 import "./navbar.css";
+import ButtonGlow from "../buttons/button-glow";
 
 
 const Navbar = ({ data }) => {
@@ -49,18 +50,16 @@ const Navbar = ({ data }) => {
         <Link to="/" className="nav-link">
           <h5>PORTFOLIO</h5>
         </Link>
-        <Link to="/" className="nav-link">
+        <Link to="/component-library" className="nav-link">
           <h5>COMPONENTS</h5>
         </Link>
         <Link to="/journal" className="nav-link">
           <h5>JOURNAL</h5> 
         </Link>
       </div>
+      <ButtonGlow text="CONTACT" onClick="/contact-page" />
 
-        <Link to="/contact-page" className="CTA">
-          <MailSVG className="mail-svg" />
-          <h5>GET IN TOUCH</h5>
-        </Link>
+     
       </div>
     </div>
   );
