@@ -3,9 +3,10 @@
 :root {
     --background-color: #F3F3F3; /* Light gray for general backgrounds */
     --brand-color: #e54927; /* Bright blue for brand-specific elements */
-    --dark-text: #333840; /* Nearly black for dark text */
+    --dark-text: #24272d; /* Nearly black for dark text */
     --medium-text: #677282; /* Very light gray for light text */
-    --light-text: #7E899A; /* Pure white for the lightest text */
+    --light-text: #768090; /* Pure white for the lightest text */
+    --lighter-text: #b2b8c1;
     --email-link-color: #ee3c21; /* Blue for email links */
     --email-link-hover:var(--brand-color)
 }
@@ -49,9 +50,13 @@ body {
   flex: 1;
 }
 
+.small-spacer{
+  padding: 8px;
+}
 
-
-
+.paragraph-spacing {
+  margin-bottom: 20px; /* Adjust the value as needed */
+}
 
 
 /*TYPOGRAPHY*/
@@ -65,29 +70,35 @@ h1, h2, h3, h4, h5, h6, p, .smaller-text, .smallest-text{
   h1 { font-size: 6rem; line-height: 6rem; }
   h2 { font-size: 4.5rem; line-height: 5rem; font-weight: 500; }
   h3 { font-size: 3rem; line-height: 3.5rem; }
-  h4 { font-size: 2rem; line-height: 2.5rem; }
-  h5 { font-size: 1.5rem; line-height: 2rem; }
+  h4 { font-size: 2.4rem; line-height: 2.5rem; }
+  h5 { font-size: 2rem; line-height: 2rem; }
   h6 { font-size: 1rem; line-height: 1.5rem; }
   p { font-size: 1.25rem; line-height: 1.6rem; }
   .smaller-text { font-size: 1rem; line-height: 1.25rem; }
   .smallest-text { font-size: 0.875rem; line-height: 1rem; }
   
   @media (max-width: 1024px) {
-      h1 { font-size: 5rem; line-height: 5rem; }
-      h2 { font-size: 4rem; line-height: 4.5rem; }
-      h3 { font-size: 3rem; line-height: 3.5rem; }
-      h4 { font-size: 2rem; line-height: 2.5rem; }
-      h5 { font-size: 1.5rem; line-height: 2rem; }
-      h6 { font-size: 1rem; line-height: 1.5rem; }
+    h1 { font-size: 6rem; line-height: 6rem; }
+  h2 { font-size: 4.5rem; line-height: 5rem; font-weight: 500; }
+  h3 { font-size: 3rem; line-height: 3.5rem; }
+  h4 { font-size: 2.4rem; line-height: 2.5rem; }
+  h5 { font-size: 2rem; line-height: 2.3rem; }
+  h6 { font-size: 1rem; line-height: 1.5rem; }
+  p { font-size: 1.25rem; line-height: 1.6rem; }
+  .smaller-text { font-size: 1rem; line-height: 1.25rem; }
+  .smallest-text { font-size: 0.875rem; line-height: 1rem; }
   }
   
   @media (max-width: 768px) {
-      h1 { font-size: 3rem; line-height: 3.5rem; }
-      h2 { font-size: 2.5rem; line-height: 3rem; }
-      h3 { font-size: 2rem; line-height: 2.5rem; }
-      h4 { font-size: 1.5rem; line-height: 2rem; }
-      h5 { font-size: 1.25rem; line-height: 1.5rem; }
-      h6 { font-size: 1rem; line-height: 1.25rem; }
+    h1 { font-size: 6rem; line-height: 6rem; }
+    h2 { font-size: 4.5rem; line-height: 5rem; font-weight: 500; }
+    h3 { font-size: 3rem; line-height: 3.5rem; }
+    h4 { font-size: 1.8rem; line-height: 2.5rem; }
+    h5 { font-size: 1.5rem; line-height: 2rem; }
+    h6 { font-size: 1rem; line-height: 1.5rem; }
+    p { font-size: 1rem; line-height: 1.6rem; }
+    .smaller-text { font-size: 1rem; line-height: 1.25rem; }
+    .smallest-text { font-size: 0.875rem; line-height: 1rem; }
   }
 
 
