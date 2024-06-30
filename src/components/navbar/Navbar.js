@@ -1,5 +1,5 @@
 import * as React from "react";
-import MailSVG from "../../assets/mail.svg";
+import Hamburger from "../../assets/Hamburger_icon.svg";
 import { useEffect, useState } from "react";
 import { Link } from "gatsby";
 import "./navbar.css";
@@ -7,9 +7,11 @@ import ButtonGlow from "../buttons/button-glow";
 
 
 const Navbar = ({ data }) => {
+
   /* NAVBAR LOGIC */
   const [lastScrollY, setLastScrollY] = useState(0);
   const [navbarVisible, setNavbarVisible] = useState(true);
+  const [hamburgerVisible, setHamburgerVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,7 +38,9 @@ const Navbar = ({ data }) => {
 
 
 
-
+  const toggleHamburgerMenu = () => {
+    setHamburgerVisible(!hamburgerVisible);
+  };
 
   return (
     <div className={`navbar-container ${navbarVisible ? 'visible' : 'hidden'}`}>
@@ -60,9 +64,10 @@ const Navbar = ({ data }) => {
           <h6>STYLES</h6> 
         </Link>
       </div>
-      <ButtonGlow text="GET IN TOUCH" onClick="/contact-page" />
-
-     
+      
+      <ButtonGlow text="GET IN TOUCH" onClick="/contact-page" className="contact-button" />
+      <button id="hamburger-menu" onClick= {toggleHamburgerMenu} aria-label="Open Menu"><Hamburger/></button>
+   
       </div>
     </div>
   );

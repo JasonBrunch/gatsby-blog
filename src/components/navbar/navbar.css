@@ -36,9 +36,7 @@
     padding: 0.5rem 0;
   }
     .navbar{
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
+     
       padding: 10px 16px;
     }
     .navbar h3{
@@ -86,6 +84,21 @@
     padding: 0;
 
 }
+#hamburger-menu {
+  display: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+@media (max-width:768px){
+  .nav-links{
+    display: none;
+  }
+  #hamburger-menu{
+    display: block;
+  }
+}
 .nav-link{
     text-decoration: none;
     color: var(--dark-text);
@@ -93,7 +106,11 @@
 
 }
 
-
+@media (max-width: 768px) {
+  .navbar .contact-button, .CTA {
+    display: none;
+  }
+}
 
 
 
