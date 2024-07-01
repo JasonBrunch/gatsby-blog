@@ -1,0 +1,24 @@
+.LogoSVG-Container {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 34px; /* Set your desired height */
+    width: fit-content;
+}
+
+.LogoSVG-Container svg {
+    height: 100%; /* Make the SVG take the full height of the container */
+    width: auto; /* Maintain the aspect ratio */
+}
+.circle-1{
+    fill: var(--brand-color);
+    stroke-width: 0px;
+}
+
+.text {
+    font-family: Almarai-Bold, Almarai;
+    font-size: 24px;
+    font-weight: 700;
+    fill: black;
+}

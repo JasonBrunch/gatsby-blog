@@ -5,6 +5,7 @@ import { Link } from "gatsby";
 import "./navbar.css";
 import ButtonGlow from "../buttons/button-glow";
 import DarkModeButton from "../buttons/button-dark-mode";
+import Logo from "../logo/Logo.js";
 
 const Navbar = ({ data }) => {
   /* NAVBAR LOGIC */
@@ -42,10 +43,7 @@ const Navbar = ({ data }) => {
   return (
     <div className={`navbar-container ${navbarVisible ? "visible" : "hidden"}`}>
       <div className="navbar">
-        <div className="logo-container">
-          <h6>JASON BUNCE</h6>
-          <div className="circle"></div>
-        </div>
+        <Logo />
 
         <div className="nav-links">
           <Link to="/" className="nav-link">
