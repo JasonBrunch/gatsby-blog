@@ -1,0 +1,30 @@
+.grid-display-main-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
+    grid-auto-rows: 200px; /* Set a base height for each row */
+    gap: 10px; /* Space between grid items */
+    padding: 10% 5%;
+}
+@media (max-width: 1024px){
+    .grid-display-main-container{
+        grid-template-columns: repeat(2 , 1fr);
+    }
+}
+.grid-item {
+    background-color: #d72cf9; /* Background color for visualization */
+    border: 1px solid #ccc; /* Border for visualization */
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.grid-item.tall {
+    grid-row: span 2; /* Spans 2 rows */
+}
+
+.grid-item.short {
+    grid-row: span 1; /* Spans 1 row */
+}
