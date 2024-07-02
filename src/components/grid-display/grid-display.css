@@ -1,30 +1,42 @@
+/* grid-display.css */
+
 .grid-display-main-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
-    grid-auto-rows: 200px; /* Set a base height for each row */
     gap: 10px; /* Space between grid items */
-    padding: 10% 5%;
+    padding: 10px;
 }
-@media (max-width: 1024px){
-    .grid-display-main-container{
-        grid-template-columns: repeat(2 , 1fr);
+
+@media (max-width: 1024px) {
+    .grid-display-main-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
     }
 }
+
 .grid-item {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
+    overflow: hidden;
     background-color: #d72cf9; /* Background color for visualization */
     border: 1px solid #ccc; /* Border for visualization */
     border-radius: 4px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
-    text-align: center;
 }
 
-.grid-item.tall {
-    grid-row: span 2; /* Spans 2 rows */
-}
-
-.grid-item.short {
-    grid-row: span 1; /* Spans 1 row */
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
