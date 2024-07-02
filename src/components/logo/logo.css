@@ -20,5 +20,5 @@
     font-family: Almarai-Bold, Almarai;
     font-size: 24px;
     font-weight: 700;
-    fill: black;
+    fill: var( --dark-text)
 }
