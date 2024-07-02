@@ -14,8 +14,25 @@ const Home = ({ data }) => {
     <Layout>
      
       
-      <GridDisplay/>
+      
       <div className="home-main-container">
+
+        <section className="home-hero-main-container">
+          <div className="home-left-half-container">
+              <div className="hero-text">
+                <h5>Web Developer</h5>
+                <h2>JASON BUNCE</h2>
+                <p>Empowering People, Cultivating Excellence</p>
+              </div>
+          </div>
+          <div className="home-right-half-container"></div>
+          
+
+
+        </section>
+
+
+
         <div className="home-about-container-black">
           <h4>Multi disciplinary creative based in Auckland, crafting Digital Experiences at Colenso BBDO.</h4>
           <h5>With stories from 3 continents, speaking 4.5 languages in a mixed accent,
@@ -30,6 +47,8 @@ const Home = ({ data }) => {
           </div>
         </div>
       </div>
+    <GridDisplay/>
+
     </Layout>
   );
 };

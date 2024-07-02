@@ -16,12 +16,21 @@
 .grid-item {
     position: relative;
     width: 100%;
-    padding-top: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
     overflow: hidden;
     background-color: #d72cf9; /* Background color for visualization */
     border: 1px solid #ccc; /* Border for visualization */
     border-radius: 4px;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.medium-grid-item {
+    padding-top: calc(9 / 16 * 100%); /* 16:9 aspect ratio */
+    grid-row: span 16; /* Span 16 rows (16 * 10px = 160px height) */
+}
+
+.tall-grid-item {
+    padding-top: calc(3 / 4 * 100%); /* 4:3 aspect ratio */
+    grid-row: span 24; /* Span 24 rows (24 * 10px = 240px height) */
 }
 
 .grid-item > div {
