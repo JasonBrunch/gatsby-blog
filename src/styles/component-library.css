@@ -60,6 +60,7 @@
     flex-direction: column;
 
     padding: 20% 5%;
+    gap: 0.5rem;
 }
 .display-container {
     background-color: darkmagenta;
@@ -69,3 +70,6 @@
     border-radius: 10px;
   }
   
+  .breadcrumb-container h6{
+    color: var(--medium-text);
+  }

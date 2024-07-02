@@ -1,0 +1,45 @@
+.home-main-container {
+  display: flex;
+    flex-direction: column;
+  width: 100%;
+  height: auto;
+
+  box-sizing: border-box;
+  padding: 5%;
+
+  margin-top: 15%;
+  gap: 3rem;
+}
+
+.home-about-container-black{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--dark-text);
+    padding: 5%;
+    gap: 2rem;
+    border-radius: 14px;
+}
+.home-about-container-black h4{
+    color: white;
+}
+.home-about-container-black h5{
+    color: var(--lighter-text);
+    font-weight: 300;
+    padding-right: 15%;
+}
+.home-about-container-white{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 5%;
+    border-radius: 15px;
+
+    gap: 3.5rem;
+}
+.portrait{
+    border-radius: 16px;
+}
+
