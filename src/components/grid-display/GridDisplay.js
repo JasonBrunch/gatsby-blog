@@ -27,6 +27,11 @@ const GridDisplay = () => {
           gatsbyImageData(width: 1920, quality: 100, layout: CONSTRAINED)
         }
       }
+       burgerCoImage: file(relativePath: {eq: "burgerco.png"}) {
+        childImageSharp{
+          gatsbyImageData(width: 1920, quality: 100, layout: CONSTRAINED)
+        }
+      } 
     }
   `);
 
@@ -35,6 +40,7 @@ const GridDisplay = () => {
   const wizardImage = getImage(data.wizardHunterImage);
   const creeklifeImage = getImage(data.creeklifeImage);
   const dayforgeImage = getImage(data.dayforgeImage);
+  const burgerCoImage = getImage(data.burgerCoImage);
 
   return (
     <section className="grid-display-main-container">
@@ -43,7 +49,7 @@ const GridDisplay = () => {
       <div className="grid-item medium-grid-item"><GatsbyImage image={componentImage} alt="Component Library" /></div>
       <div className="grid-item medium-grid-item"><GatsbyImage image={wizardImage} alt="Wizard Hunter" /></div>
       <div className="grid-item medium-grid-item"><GatsbyImage image={dayforgeImage} alt="Dayforge" /></div>
-      <div className="grid-item tall-grid-item"></div>
+      <div className="grid-item tall-grid-item"><GatsbyImage image={burgerCoImage} alt="Burger Restaurant" /></div>
     </section>
   );
 };
