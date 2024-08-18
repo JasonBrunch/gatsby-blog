@@ -1,65 +1,64 @@
 .home-main-container {
-  display: flex;
+    background-color: var(--background-color);
+    display: flex;
     flex-direction: column;
-  width: 100%;
-  height: auto;
-
-  box-sizing: border-box;
-
-
-
-  gap: 3rem;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  
 }
 
 
-.home-hero-main-container{
+.home-hero-main-container {
     height: 100dvh;
     background-color: aquamarine;
     width: 100%;
     display: flex;
-    flex-direction: row;
-}
-.home-left-half-container, .home-right-half-container {
-display: flex;
-flex-direction: column;
-width: 50%;
-box-sizing: border-box;
-
-}
-.home-left-half-container{
-    background-color: dodgerblue;
+    flex-direction: column;
     justify-content: center;
-    align-items: end;
+    align-items: center;
 }
-.hero-text{
+
+
+
+
+.hero-text {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 30px;
 }
-.home-right-half-container{
+
+.home-right-half-container {
     background-color: lime;
 }
 
 
-.home-about-container-black{
+.home-about-container-black {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     background-color: var(--dark-text);
     padding: 5%;
     gap: 2rem;
     border-radius: 14px;
 }
-.home-about-container-black h4{
+
+.home-about-container-black h4 {
     color: white;
 }
-.home-about-container-black h5{
+
+.home-about-container-black h5 {
+
     color: var(--lighter-text);
     font-weight: 300;
     padding-right: 15%;
 }
-.home-about-container-white{
+
+.home-about-container-white {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,7 +68,7 @@ box-sizing: border-box;
 
     gap: 3.5rem;
 }
-.portrait{
+
+.portrait {
     border-radius: 16px;
 }
-
