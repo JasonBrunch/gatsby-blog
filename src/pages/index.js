@@ -5,6 +5,8 @@ import Layout from "../components/layout";
 import GridDisplay from "../components/grid-display/GridDisplay";
 import "../styles/portfolio.css";
 import ButtonWhite from "../components/buttons/button-white";
+import Pointer from "../components/pointer/Pointer";
+
 
 const Home = ({ data }) => {
   // Get the image data using getImage helper function
@@ -17,15 +19,16 @@ const Home = ({ data }) => {
 
       <div className="home-main-container">
 
-        <section className="home-hero-main-container">
-          <div className="hero-image"><GatsbyImage image={portrait} alt="Mustafa" className="portrait" /></div>
-          <div className="hero-text">
-            <h5>Web Developer</h5>
-            <h2>JASON BUNCE</h2>
-            <p>Empowering People, Cultivating Excellence</p>
-            <ButtonWhite text={"SEE PROJECTS"} />
+        <section className="home-hero-main-container debug">
+          <div className="hero-image debug"><GatsbyImage image={portrait} alt="Mustafa" className="portrait" /></div>
+          <div className="hero-text debug">
+            <h5 className="debug">Web Developer</h5>
+            <h2 className="debug">JASON BUNCE</h2>
+            <p className="debug">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida lorem quis quam tristique euismod. </p>
+            
           </div>
-
+          <ButtonWhite text={"SEE PROJECTS"} />
+          <Pointer/>
 
 
 
