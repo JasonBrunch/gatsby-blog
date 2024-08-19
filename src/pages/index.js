@@ -6,6 +6,9 @@ import GridDisplay from "../components/grid-display/GridDisplay";
 import "../styles/portfolio.css";
 import ButtonWhite from "../components/buttons/button-white";
 import Pointer from "../components/pointer/Pointer";
+import NextIcon from "../assets/nextjs-icon.svg";
+import NodeIcon from "../assets/node-icon.svg";
+import WordpressIcon from "../assets/wordpress-icon.svg";
 
 
 const Home = ({ data }) => {
@@ -26,10 +29,10 @@ const Home = ({ data }) => {
             <h5 className="debug">Web Developer</h5>
             <h2 className="debug">JASON BUNCE</h2>
             <p className="debug">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida lorem quis quam tristique euismod. </p>
-            
+
           </div>
           <ButtonWhite text={"SEE PROJECTS"} />
-          <Pointer title="About" className="pointer-container"  />
+          <Pointer title="About" className="pointer-container" />
 
 
 
@@ -41,8 +44,25 @@ const Home = ({ data }) => {
 
 
         <section className="default-container">
-        <GatsbyImage image={coding} alt="Coding" className="portrait" />
-          
+          <h2>SERVICES & TECH</h2>
+          <GatsbyImage image={coding} alt="Coding" className="portrait" />
+          <h3>WEB DEVELOPER | WEB DESIGNER</h3>
+          <div className="tech-stack-container debug">
+            <NextIcon className="tech-stack-icon debug"/>
+            <NodeIcon className="tech-stack-icon debug"/>
+            <WordpressIcon className="tech-stack-icon debug"/>
+            <WordpressIcon className="tech-stack-icon debug"/>
+           
+
+          </div>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non posuere dolor. 
+              Vivamus et lectus at arcu rhoncus aliquam. Sed tincidunt, dui ut vulputate interdum, 
+              massa sapien sodales metus, a fermentum ex quam vitae nulla. Fusce non urna eleifend 
+              urna fermentum accumsan. Vivamus et lectus at arcu rhoncus. 
+            </p>
+          <ButtonWhite text="SEE BLOG" />
+          <ButtonWhite text="CONTACT" />
+          <Pointer title="PROJECTS" />
         </section>
 
 

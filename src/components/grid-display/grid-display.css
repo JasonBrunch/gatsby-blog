@@ -2,16 +2,18 @@
 
 .grid-display-main-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
+    grid-template-columns: repeat(1, 1fr); /* 3 columns of equal width */
     gap: 10px; /* Space between grid items */
     padding: 10px;
 }
 
-@media (max-width: 1024px) {
+
+@media (min-width: 1900px) {
     .grid-display-main-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+        grid-template-columns: repeat(3, 1fr); /* 2 columns on smaller screens */
     }
 }
+
 
 .grid-item {
     position: relative;
