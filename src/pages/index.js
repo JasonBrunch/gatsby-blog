@@ -9,6 +9,7 @@ import Pointer from "../components/pointer/Pointer";
 import NextIcon from "../assets/nextjs-icon.svg";
 import NodeIcon from "../assets/node-icon.svg";
 import WordpressIcon from "../assets/wordpress-icon.svg";
+import ButtonCoolShadow from "../components/buttons/button-cool-shadow";
 
 
 const Home = ({ data }) => {
@@ -23,21 +24,25 @@ const Home = ({ data }) => {
 
       <div className="home-main-container">
 
-        <section className="home-hero-main-container debug">
-          <div className="hero-image debug"><GatsbyImage image={portrait} alt="Me" className="portrait" /></div>
-          <div className="hero-text debug">
-            <h5 className="debug">Web Developer</h5>
-            <h2 className="debug">JASON BUNCE</h2>
-            <p className="debug">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida lorem quis quam tristique euismod. </p>
+        <section className="home-hero-main-container ">
+          <div className="hero-secondary-containter ">
 
+
+
+            <div className="hero-image"><GatsbyImage image={portrait} alt="Me" className="portrait" /></div>
+            <div className="hero-text ">
+              <h4 >Web Developer</h4>
+              <h3 >JASON BUNCE</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida lorem quis quam tristique euismod. </p>
+
+            </div>
+           
+            <div className="button-container"><ButtonCoolShadow/><ButtonCoolShadow/></div>
           </div>
-          <ButtonWhite text={"SEE PROJECTS"} />
-          <Pointer title="About" className="pointer-container" />
-
-
-
-
-
+          <div className="pointer-container-container">
+             <Pointer title="About" className="pointer-container" />
+          </div>
+         
 
 
         </section>
@@ -48,18 +53,18 @@ const Home = ({ data }) => {
           <GatsbyImage image={coding} alt="Coding" className="portrait" />
           <h3>WEB DEVELOPER | WEB DESIGNER</h3>
           <div className="tech-stack-container debug">
-            <NextIcon className="tech-stack-icon debug"/>
-            <NodeIcon className="tech-stack-icon debug"/>
-            <WordpressIcon className="tech-stack-icon debug"/>
-            <WordpressIcon className="tech-stack-icon debug"/>
-           
+            <NextIcon className="tech-stack-icon debug" />
+            <NodeIcon className="tech-stack-icon debug" />
+            <WordpressIcon className="tech-stack-icon debug" />
+            <WordpressIcon className="tech-stack-icon debug" />
+
 
           </div>
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non posuere dolor. 
-              Vivamus et lectus at arcu rhoncus aliquam. Sed tincidunt, dui ut vulputate interdum, 
-              massa sapien sodales metus, a fermentum ex quam vitae nulla. Fusce non urna eleifend 
-              urna fermentum accumsan. Vivamus et lectus at arcu rhoncus. 
-            </p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non posuere dolor.
+            Vivamus et lectus at arcu rhoncus aliquam. Sed tincidunt, dui ut vulputate interdum,
+            massa sapien sodales metus, a fermentum ex quam vitae nulla. Fusce non urna eleifend
+            urna fermentum accumsan. Vivamus et lectus at arcu rhoncus.
+          </p>
           <ButtonWhite text="SEE BLOG" />
           <ButtonWhite text="CONTACT" />
           <Pointer title="PROJECTS" />

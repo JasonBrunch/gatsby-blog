@@ -41,7 +41,7 @@ const Navbar = ({ data }) => {
   };
 
   return (
-    <div className={`navbar-container ${navbarVisible ? "visible" : "hidden"}`}>
+    <div className={`navbar-container ${navbarVisible ? "visible" : "hidden"} debug`}>
       <div className="navbar">
         <Logo />
 

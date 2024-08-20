@@ -1,3 +1,6 @@
+/*importing fonts here the best */
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap');
+
 /* src/styles/global.css */
 /* Global style settings */
 :root {
@@ -10,13 +13,14 @@
   --email-link-color: #ee3c21;
   --email-link-hover: var(--brand-color);
     /*light theme colors*/
-    --background-color-light: #d4d4d4;
+    --background-color-light: #e8e8e8;
 
   /*dark theme colors*/
   --background-color-dark: #771ae9;
 
   /*GLOBAL PADDING*/
   --padding-xlarge: 5%;
+  --padding-small: 5%;
 
 
 
@@ -209,13 +213,13 @@ p {
   }
 
   h5 {
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 0.5rem;
+    line-height: 0.5rem;
   }
 
   h6 {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 0.3rem;
+    line-height: 0.3rem;
   }
 
   p {
@@ -245,5 +249,5 @@ p {
 }
 
 .debug2 {
-  border: 1px solid rgb(255, 0, 200);
+  border: 1px solid rgb(0, 0, 255);
 }

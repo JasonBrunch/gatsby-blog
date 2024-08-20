@@ -1,12 +1,12 @@
 import React from 'react';
 import './button-white.css';
-import { Link } from 'gatsby';
 
-const ButtonWhite = ({ text, onClick }) => {
+
+const ButtonWhite = ({ text, to, onClick }) => {
     return (
-        <Link to={onClick} className="button-white">
+        <button className="button-white" onClick={onClick}>
             {text}
-        </Link>
+        </button>
     );
 }
 
