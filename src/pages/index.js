@@ -32,7 +32,7 @@ const Home = ({ data }) => {
             <div className="hero-image"><GatsbyImage image={portrait} alt="Me" className="portrait" /></div>
             <div className="hero-text ">
               <h4 >Web Developer</h4>
-              <h3 >JASON BUNCE</h3>
+              <h3  >JASON BUNCE</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida lorem quis quam tristique euismod. </p>
 
             </div>
