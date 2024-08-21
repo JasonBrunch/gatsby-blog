@@ -49,24 +49,28 @@ const Home = ({ data }) => {
 
 
         <section className="default-container">
-          <h2>SERVICES & TECH</h2>
-          <GatsbyImage image={coding} alt="Coding" className="portrait" />
-          <h3>WEB DEVELOPER | WEB DESIGNER</h3>
-          <div className="tech-stack-container debug">
-            <NextIcon className="tech-stack-icon debug" />
-            <NodeIcon className="tech-stack-icon debug" />
-            <WordpressIcon className="tech-stack-icon debug" />
-            <WordpressIcon className="tech-stack-icon debug" />
+          <div className="inner-container">
+            <h4 className="">SERVICES & TECH</h4>
+            <GatsbyImage image={coding} alt="Coding" className="portrait" />
+            <h5>WEB DEVELOPER | WEB DESIGNER</h5>
+            <div className="tech-stack-container ">
+              <NextIcon className="tech-stack-icon " />
+              <NodeIcon className="tech-stack-icon " />
+              <WordpressIcon className="tech-stack-icon " />
+              <WordpressIcon className="tech-stack-icon " />
 
+
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non posuere dolor.
+              Vivamus et lectus at arcu rhoncus aliquam. Sed tincidunt, dui ut vulputate interdum,
+              massa sapien sodales metus, a fermentum ex quam vitae nulla. Fusce non urna eleifend
+              urna fermentum accumsan. Vivamus et lectus at arcu rhoncus.
+            </p>
+            <ButtonCoolShadow/>
+            <ButtonCoolShadow/>
 
           </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non posuere dolor.
-            Vivamus et lectus at arcu rhoncus aliquam. Sed tincidunt, dui ut vulputate interdum,
-            massa sapien sodales metus, a fermentum ex quam vitae nulla. Fusce non urna eleifend
-            urna fermentum accumsan. Vivamus et lectus at arcu rhoncus.
-          </p>
-          <ButtonWhite text="SEE BLOG" />
-          <ButtonWhite text="CONTACT" />
+
           <Pointer title="PROJECTS" />
         </section>
 
