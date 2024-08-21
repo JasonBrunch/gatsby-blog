@@ -44,12 +44,12 @@ const GridDisplay = () => {
 
   return (
     <section className="grid-display-main-container">
-      <div className="grid-item medium-grid-item">Project 1</div>
+      <div className="grid-item medium-grid-item"><GatsbyImage image={burgerCoImage} alt="Burger Restaurant" /></div>
       <div className="grid-item tall-grid-item"><GatsbyImage image={creeklifeImage} alt="Creek Life"/></div>
       <div className="grid-item medium-grid-item"><GatsbyImage image={componentImage} alt="Component Library" /></div>
       <div className="grid-item medium-grid-item"><GatsbyImage image={wizardImage} alt="Wizard Hunter" /></div>
       <div className="grid-item medium-grid-item"><GatsbyImage image={dayforgeImage} alt="Dayforge" /></div>
-      <div className="grid-item tall-grid-item"><GatsbyImage image={burgerCoImage} alt="Burger Restaurant" /></div>
+      <div className="grid-item tall-grid-item">Project 6</div>
     </section>
   );
 };

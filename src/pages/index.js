@@ -66,15 +66,22 @@ const Home = ({ data }) => {
               massa sapien sodales metus, a fermentum ex quam vitae nulla. Fusce non urna eleifend
               urna fermentum accumsan. Vivamus et lectus at arcu rhoncus.
             </p>
-            <ButtonCoolShadow/>
-            <ButtonCoolShadow/>
+            <div className="button-container2">
+              <ButtonCoolShadow/>
+              <ButtonCoolShadow/>
+            </div>
+          
 
           </div>
 
-          <Pointer title="PROJECTS" />
+       
         </section>
+        <Pointer title="PROJECTS" />
+        <div className="default-container">
 
-
+          <h4 className="">RECENT PROJECTS</h4>
+        </div>
+        
 
 
 
