@@ -25,6 +25,11 @@
     box-shadow: 0 6px 14px 0 rgba(36, 41, 45, 0.05);
     box-sizing: border-box;
   }
+  @media(min-width: 1200px){
+    .navbar{
+      padding:  15px var(--padding-xlarge) ;
+    }
+  }
 
 
 

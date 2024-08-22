@@ -32,17 +32,20 @@ const Home = ({ data }) => {
             <div className="hero-image"><GatsbyImage image={portrait} alt="Me" className="portrait" /></div>
             <div className="hero-text ">
               <h4 >Web Developer</h4>
-              <h3  >JASON BUNCE</h3>
+              <h2  >JASON BUNCE</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida lorem quis quam tristique euismod. </p>
 
             </div>
-           
-            <div className="button-container"><ButtonCoolShadow/><ButtonCoolShadow/></div>
+
+            <div className="button-container">
+              <ButtonCoolShadow title="CONTACT" />
+              <ButtonCoolShadow title="SEE PROJECTS" />
+            </div>
           </div>
           <div className="pointer-container-container">
-             <Pointer title="About" className="pointer-container" />
+            <Pointer title="About" className="pointer-container" />
           </div>
-         
+
 
 
         </section>
@@ -50,8 +53,12 @@ const Home = ({ data }) => {
 
         <section className="default-container">
           <div className="inner-container">
-            <h4 className="">SERVICES & TECH</h4>
-            <GatsbyImage image={coding} alt="Coding" className="portrait" />
+            <div className="aboutme-top-container">
+              <h4 className="">SERVICES & TECH</h4>
+              <GatsbyImage image={coding} alt="Coding" className="portrait" />
+
+            </div>
+
             <h5>WEB DEVELOPER | WEB DESIGNER</h5>
             <div className="tech-stack-container ">
               <NextIcon className="tech-stack-icon " />
@@ -67,21 +74,21 @@ const Home = ({ data }) => {
               urna fermentum accumsan. Vivamus et lectus at arcu rhoncus.
             </p>
             <div className="button-container2">
-              <ButtonCoolShadow/>
-              <ButtonCoolShadow/>
+              <ButtonCoolShadow />
+              <ButtonCoolShadow />
             </div>
-          
+
 
           </div>
 
-       
+
         </section>
         <Pointer title="PROJECTS" />
         <div className="default-container">
 
           <h4 className="">RECENT PROJECTS</h4>
         </div>
-        
+
 
 
 

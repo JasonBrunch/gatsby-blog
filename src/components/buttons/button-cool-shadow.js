@@ -1,9 +1,9 @@
 import React from "react";
 import './button-cool-shadow.css';
 
-const ButtonCoolShadow = () => {
+const ButtonCoolShadow = ({title}) => {
     return (
-        <button className="button-50">Button 50</button>
+        <button className="button-50">{title ? title : "Button 50"}</button>
     );
 };
 

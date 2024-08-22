@@ -1,0 +1,21 @@
+.contactform-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3.6rem var(--padding-small);
+    gap: 0.5rem;
+  
+    text-align: center;
+
+    background-color: rgb(227, 6, 6);
+
+
+}
+
+.contactform-container h4, .contactform-container p{
+    color: white;
+}
+.contactform-container p{
+    font-weight: 600;
+}

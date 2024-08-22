@@ -21,7 +21,7 @@
 .icons-container {
     display: flex;
     gap: 1rem;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 2rem 0;
 
 }
 

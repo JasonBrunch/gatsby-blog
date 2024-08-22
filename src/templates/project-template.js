@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 import "../styles/projects.css";
 import ButtonCoolShadow from "../components/buttons/button-cool-shadow";
+import ContactForm from "../components/contact/contactform";
 
 export default function ProjectTemplate({ data }) {
   const project = data.markdownRemark;
@@ -53,6 +54,7 @@ export default function ProjectTemplate({ data }) {
             </div>
           </div>
         </div>
+        <ContactForm/>
       </div>
     </Layout>
   );
