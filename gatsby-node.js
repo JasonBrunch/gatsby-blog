@@ -12,6 +12,7 @@ exports.createPages = async ({ graphql, actions }) => {
               path
             }
             id
+            fileAbsolutePath
           }
         }
       }
@@ -26,9 +27,15 @@ exports.createPages = async ({ graphql, actions }) => {
   const posts = result.data.allMarkdownRemark.edges;
 
   posts.forEach(({ node }) => {
+    // Determine if this is a blog post or project based on the file path
+    const isProject = node.fileAbsolutePath.includes("/projects/");
+    const template = isProject
+      ? path.resolve(`./src/templates/project-template.js`)
+      : path.resolve(`./src/templates/blog-post.js`);
+
     createPage({
       path: node.frontmatter.path,
-      component: path.resolve(`./src/templates/blog-post.js`),
+      component: template,
       context: {
         id: node.id,
       },
@@ -41,10 +48,11 @@ exports.createSchemaCustomization = ({ actions }) => {
   createTypes(`
     type MarkdownRemarkFrontmatter {
       title: String!
-      date: Date!
+      date: Date
       description: String!
       path: String!
       image: File @fileByRelativePath
+      technologies: [String!] # Added for project files
     }
 
     type MarkdownRemark implements Node {

@@ -1,6 +1,6 @@
 import "./grid-display.css";
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const GridDisplay = () => {
@@ -44,11 +44,21 @@ const GridDisplay = () => {
 
   return (
     <section className="grid-display-main-container">
-      <div className="grid-item medium-grid-item"><GatsbyImage image={burgerCoImage} alt="Burger Restaurant" /></div>
-      <div className="grid-item tall-grid-item"><GatsbyImage image={creeklifeImage} alt="Creek Life"/></div>
-      <div className="grid-item medium-grid-item"><GatsbyImage image={componentImage} alt="Component Library" /></div>
-      <div className="grid-item medium-grid-item"><GatsbyImage image={wizardImage} alt="Wizard Hunter" /></div>
-      <div className="grid-item medium-grid-item"><GatsbyImage image={dayforgeImage} alt="Dayforge" /></div>
+      <Link to="/projects/project1" className="grid-item medium-grid-item">
+        <GatsbyImage image={burgerCoImage} alt="Burger Restaurant" />
+      </Link>
+      <Link to="/projects/project1" className="grid-item tall-grid-item">
+        <GatsbyImage image={creeklifeImage} alt="Creek Life"/>
+      </Link>
+      <Link to="/projects/project1" className="grid-item medium-grid-item">
+        <GatsbyImage image={componentImage} alt="Component Library" />
+      </Link>
+      <Link to="/projects/project1" className="grid-item medium-grid-item">
+        <GatsbyImage image={wizardImage} alt="Wizard Hunter" />
+      </Link>
+      <Link to="/projects/project1" className="grid-item medium-grid-item">
+        <GatsbyImage image={dayforgeImage} alt="Dayforge" />
+      </Link>
       <div className="grid-item tall-grid-item">Project 6</div>
     </section>
   );

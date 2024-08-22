@@ -36,6 +36,14 @@ module.exports = {
       __key: "blog"
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: "projects",
+        path: `${__dirname}/content/projects/`
+      },
+      __key: "projects"
+    },
+    {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {

@@ -20,7 +20,7 @@
 
   /*GLOBAL PADDING*/
   --padding-xlarge: 5%;
-  --padding-small: 5%;
+  --padding-small: 1.8rem;
 
 
 
@@ -105,6 +105,12 @@ h2 {
   font-size: 4.5rem;
   line-height: 5rem;
   font-weight: 500;
+    font-family: "Spline Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+  
 }
 
 h3 {
@@ -123,7 +129,7 @@ h5 {
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.5rem;
 }
 
@@ -203,7 +209,7 @@ p {
   }
 
   h3 {
-    font-size: 3rem;
+    font-size: 2.4rem;
     line-height: 3.5rem;
   }
 
@@ -218,12 +224,13 @@ p {
   }
 
   h6 {
-    font-size: 0.3rem;
-    line-height: 0.3rem;
+    font-size: 1rem;
+    line-height: 1rem;
+
   }
 
   p {
-    font-size: 1rem;
+    font-size: 1.05rem;
     line-height: 1.6rem;
   }
 
@@ -239,7 +246,77 @@ p {
 }
 
 
+/* CONTAINERS */
 
+
+.default-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.inner-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 var(--padding-small);
+  gap: 0.2rem;
+
+  text-align: center;
+  
+}
+.inner-container2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 var(--padding-small);
+  gap: 0.2rem;
+  
+  text-align: left;
+
+  margin-top: 3rem;
+
+}
+
+.default-container h4{
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+
+}
+.default-container h5{
+  text-align: center;
+  padding: 0.35rem 0 1rem 0;
+
+
+}
+
+.button-container{
+  display: flex;
+  flex-direction: row;
+  gap: 1.25rem;
+  margin-top: 1.2rem;
+}
+.button-container2{
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0 0 20% 0;
+  width: 100%;
+
+}
+
+.pointer-container-container{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+
+  justify-content: center;
+  align-items: center;
+}
 
 
 
@@ -250,4 +327,11 @@ p {
 
 .debug2 {
   border: 1px solid rgb(0, 0, 255);
+}
+
+.centered-text{
+  text-align: center;
+}
+.left-aligned-text{
+  text-align: left;
 }

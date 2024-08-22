@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 import GridDisplay from "../components/grid-display/GridDisplay";
 import "../styles/portfolio.css";
-import ButtonWhite from "../components/buttons/button-white";
+
 import Pointer from "../components/pointer/Pointer";
 import NextIcon from "../assets/nextjs-icon.svg";
 import NodeIcon from "../assets/node-icon.svg";

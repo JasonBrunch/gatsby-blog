@@ -1,0 +1,13 @@
+.project-container{
+    background-color: rgb(255, 255, 255);
+    padding-top: 100px;
+}
+
+.project-container p{
+    color: rgb(87, 87, 87);
+    padding: 1rem 0;
+}
+
+.inner-container2 h6{
+    color: var(--brand-color);
+}
