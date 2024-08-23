@@ -52,42 +52,69 @@ const Home = ({ data }) => {
 
 
         <section className="default-container">
-          <div className="inner-container">
-            <div className="aboutme-top-container">
-              <h4 className="">SERVICES & TECH</h4>
-              <GatsbyImage image={coding} alt="Coding" className="portrait" />
+          <div className="inner-container ">
+            <div className="aboutme-wrapper ">
+              <div className="aboutme-top-container ">
+                <div className="aboutme-top-container-title-wrapper">
 
+                  <h1 className="">SERVICES & TECH</h1>
+
+                  <div className="tech-stack-container-large ">
+                    <NextIcon className="tech-stack-icon " />
+                    <NodeIcon className="tech-stack-icon " />
+                    <WordpressIcon className="tech-stack-icon " />
+                    <WordpressIcon className="tech-stack-icon " />
+
+
+                  </div>
+
+
+                </div>
+
+
+
+
+
+                <GatsbyImage image={coding} alt="Coding" className="portrait" />
+
+              </div>
+              <div className="aboutme-bottom-container">
+
+                <h5 className="">WEB DEVELOPER | WEB DESIGNER</h5>
+
+
+                <div className="tech-stack-container ">
+                  <NextIcon className="tech-stack-icon " />
+                  <NodeIcon className="tech-stack-icon " />
+                  <WordpressIcon className="tech-stack-icon " />
+                  <WordpressIcon className="tech-stack-icon " />
+
+
+                </div>
+                <p className="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non posuere dolor.
+                  Vivamus et lectus at arcu rhoncus aliquam. Sed tincidunt, dui ut vulputate interdum,
+                  massa sapien sodales metus, a fermentum ex quam vitae nulla. Fusce non urna eleifend
+                  urna fermentum accumsan. Vivamus et lectus at arcu rhoncus.
+                </p>
+
+<div className="button-container2">
+                <ButtonCoolShadow title="SEE JOURNAL" />
+                <ButtonCoolShadow title="PROJECTS" />
+              </div>
+
+
+              </div>
+
+
+              
             </div>
-
-            <h5>WEB DEVELOPER | WEB DESIGNER</h5>
-            <div className="tech-stack-container ">
-              <NextIcon className="tech-stack-icon " />
-              <NodeIcon className="tech-stack-icon " />
-              <WordpressIcon className="tech-stack-icon " />
-              <WordpressIcon className="tech-stack-icon " />
-
-
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non posuere dolor.
-              Vivamus et lectus at arcu rhoncus aliquam. Sed tincidunt, dui ut vulputate interdum,
-              massa sapien sodales metus, a fermentum ex quam vitae nulla. Fusce non urna eleifend
-              urna fermentum accumsan. Vivamus et lectus at arcu rhoncus.
-            </p>
-            <div className="button-container2">
-              <ButtonCoolShadow />
-              <ButtonCoolShadow />
-            </div>
-
 
           </div>
 
 
         </section>
         <Pointer title="PROJECTS" />
-        <div className="default-container">
-
-          <h4 className="">RECENT PROJECTS</h4>
-        </div>
+        
 
 
 

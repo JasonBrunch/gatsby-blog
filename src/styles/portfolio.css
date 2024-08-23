@@ -86,32 +86,62 @@
 }
 
 
-.portrait{
+.portrait {
     max-width: 600px;
 }
 
 
-.aboutme-top-container{
+.aboutme-top-container, .aboutme-bottom-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 0 var(--padding-small);
-    gap: 0.2rem;
-  
+
+    gap: 1rem;
+
+    width: 100%;
+
     text-align: center;
 }
-@media (min-width: 1200px){
+
+
+@media (min-width: 1200px) {
     .aboutme-top-container {
-        flex-direction: row; /* Align in a row on larger screens */
-      }
-    .aboutme-top-container h4 {
-        order: 2; /* Move the heading to the right */
-      }
+        flex-direction: row;
+
+     
+
+
+    }
+    .aboutme-wrapper{
+
+        border-left: 1px solid var(--border-color);
+        border-right: 1px solid var(--border-color);
+
+        padding: 0 10%;
+    }
+
+    .aboutme-top-container .aboutme-top-container-title-wrapper {
+        order: 2;
+        /* Move the heading to the right */
     
-      .aboutme-top-container .portrait {
-        order: 1; /* Move the image to the left */
-      }
+        text-align: end;
+    }
+
+    .aboutme-top-container .portrait {
+        order: 1;
+        /* Move the image to the left */
+    }
+
+    .aboutme-bottom-container{
+        justify-content:flex-start;
+        align-items: start;
+
+        max-width: 600px;
+        text-align: left;
+        gap: 0rem;
+
+    }
 }
 
 
@@ -147,7 +177,8 @@
     .pointer-line2 {
         display: none;
     }
-    .pointer-line{
+
+    .pointer-line {
         width: var(--padding-xlarge);
     }
 }
@@ -175,9 +206,34 @@
     gap: 0.6rem;
 
 }
+@media (min-width: 1200px){
+    .tech-stack-container {
+        display: none;
+    }
+}
+.tech-stack-container-large {
+    display: none;
+   
 
+}
+@media (min-width: 1200px){
+    .tech-stack-container-large {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: flex-end;
+        justify-content:end;
+        gap: 1rem;
+
+        margin-top: 1.5rem;
+        
+    }
+    .tech-stack-icon {
+        height: 100%;
+        width: 65px;
+    }
+}
 .tech-stack-icon {
     height: 100%;
     width: 50px;
 }
-

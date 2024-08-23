@@ -13,7 +13,9 @@
   --email-link-color: #ee3c21;
   --email-link-hover: var(--brand-color);
   /*light theme colors*/
-  --background-color-light: #e8e8e8;
+  --background-color-light: #f6f6f6;
+
+  --border-color:  #505050;
 
   /*dark theme colors*/
   --background-color-dark: #771ae9;
@@ -99,8 +101,8 @@ p,
 
 
 h1 {
-  font-size: 6rem;
-  line-height: 6rem;
+  font-size: 2.5rem;
+  line-height: 3rem;
 }
 
 h2 {
@@ -125,8 +127,12 @@ h4 {
 }
 
 h5 {
-  font-size: 1.25rem;
-  line-height: 1.25rem;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+
+  font-family: "Spline Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 h6 {
@@ -155,7 +161,10 @@ p {
 }
 
 @media(min-width: 1200px ){
-
+  h1 {
+    font-size: 6rem;
+    line-height: 6rem;
+  }
 }
 
 
@@ -182,6 +191,11 @@ p {
 
   text-align: center;
 
+}
+@media (min-width:1200px){
+  .inner-container{
+    padding: 0 var(--padding-xlarge);
+  }
 }
 
 .inner-container2 {
@@ -211,6 +225,7 @@ p {
 
 }
 
+
 .button-container {
   display: flex;
   flex-direction: row;
@@ -225,6 +240,16 @@ p {
   padding: 0 0 20% 0;
   width: 100%;
 
+}
+@media (min-width: 1200px){
+  .button-container2 {
+    display: flex;
+    flex-direction: row;
+    gap: 1.7rem;
+
+    width: 100%;
+    padding: 1.5rem 0 20% 0;
+  }
 }
 
 .pointer-container-container {
