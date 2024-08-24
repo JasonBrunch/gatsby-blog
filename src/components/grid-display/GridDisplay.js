@@ -52,7 +52,7 @@ const GridDisplay = () => {
         <Link to="/projects/project1" className="grid-item medium-grid-item">
           <GatsbyImage image={burgerCoImage} alt="Burger Restaurant" />
         </Link>
-        <Link to="/projects/project1" className="grid-item tall-grid-item">
+        <Link to="/projects/project1" className="grid-item medium-grid-item">
           <GatsbyImage image={creeklifeImage} alt="Creek Life" />
         </Link>
         <Link to="/projects/project1" className="grid-item medium-grid-item">
@@ -64,7 +64,7 @@ const GridDisplay = () => {
         <Link to="/projects/project1" className="grid-item medium-grid-item">
           <GatsbyImage image={dayforgeImage} alt="Dayforge" />
         </Link>
-        <div className="grid-item tall-grid-item">Project 6</div>
+        <div className="grid-item medium-grid-item">Project 6</div>
       </div>
       </div>
      

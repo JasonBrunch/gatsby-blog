@@ -12,6 +12,22 @@
 
 
 }
+.inner-contact-form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 0.5rem;
+
+}
+
+@media(min-width: 1200px){
+    .inner-contact-form-container{
+
+        max-width: 500px;
+    }
+}
 
 .contactform-container h4, .contactform-container p{
     color: white;

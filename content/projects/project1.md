@@ -11,7 +11,7 @@ icons:
   - "./nextjs-icon.svg"
 ---
 
-#### DESCRIPTION
+
 
 Project 1 is a web application designed to help users manage their tasks more efficiently. It integrates with various third-party services to provide a seamless experience.
 

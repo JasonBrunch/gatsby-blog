@@ -1,14 +1,96 @@
-.project-container{
+.project-container {
     background-color: rgb(255, 255, 255);
     padding-top: 100px;
 }
+@media(min-width: 1200px){
+    .project-container{
+     padding: 0;
+ 
+    }
+}
 
-.project-container p{
+.project-container p {
     color: rgb(87, 87, 87);
     padding: 1rem 0;
 }
 
-.inner-container2 h6{
+
+
+.project-inner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 var(--padding-small);
+    gap: 0.2rem;
+
+    text-align: center;
+
+}
+.project-inner-container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 var(--padding-small);
+    gap: 0.2rem;
+
+    text-align: center;
+
+}
+
+.project-heading-container{
+
+}
+
+@media (min-width:1200px) {
+    .project-inner-container {
+        padding: 0 var(--padding-xxlarge);
+
+        flex-direction: row;
+        height: 100dvh;
+
+
+
+    }
+
+    .project-inner-container2 {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0 var(--padding-xxlarge);
+    }
+
+
+
+
+
+
+    .project-image-container {
+        order: 2;
+    }
+
+    .project-text-container {
+        order: 1;
+
+        text-align: left;
+        max-width: 650px;
+
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+    }
+
+    .project-heading-container{
+        text-align: left;
+    }
+}
+
+
+
+
+
+
+.inner-container2 h6 {
     color: var(--brand-color);
 }
 

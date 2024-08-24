@@ -65,7 +65,7 @@
     overflow: hidden;
     background-color: #d72cf9;
     /* Background color for visualization */
-    border: 1px solid #ccc;
+    border: 1px solid #bababa;
     /* Border for visualization */
     border-radius: 4px;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
@@ -76,13 +76,6 @@
     /* 16:9 aspect ratio */
     grid-row: span 16;
     /* Span 16 rows (16 * 10px = 160px height) */
-}
-
-.tall-grid-item {
-    padding-top: calc(3 / 4 * 100%);
-    /* 4:3 aspect ratio */
-    grid-row: span 24;
-    /* Span 24 rows (24 * 10px = 240px height) */
 }
 
 .grid-item>div {
@@ -101,3 +94,11 @@
     height: 100%;
     object-fit: cover;
 }
+/* UNUSED BUT MAYBE BRING BACK LATER I DUNNO 
+.tall-grid-item {
+    padding-top: calc(3 / 4 * 100%);
+
+    grid-row: span 24;
+
+}
+*/

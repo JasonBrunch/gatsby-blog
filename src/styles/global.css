@@ -21,6 +21,7 @@
   --background-color-dark: #771ae9;
 
   /*GLOBAL PADDING*/
+  --padding-xxlarge: 10%;
   --padding-xlarge: 8%;
   --padding-small: 1.8rem;
 
@@ -165,6 +166,18 @@ p {
     font-size: 6rem;
     line-height: 6rem;
   }
+  h2 {
+    font-size: 4rem;
+    line-height: 3.5rem;
+    
+
+  }
+  p {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  
+
+  }
 }
 
 
@@ -237,8 +250,10 @@ p {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  padding: 0 0 20% 0;
   width: 100%;
+
+ 
+  align-items: center;
 
 }
 @media (min-width: 1200px){
@@ -248,7 +263,7 @@ p {
     gap: 1.7rem;
 
     width: 100%;
-    padding: 1.5rem 0 20% 0;
+    align-items: flex-start;
   }
 }
 
