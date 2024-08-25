@@ -49,15 +49,11 @@ const Navbar = ({ data }) => {
           <Link to="/" className="nav-link">
             <h6 className="smaller-text">PORTFOLIO</h6>
           </Link>
-          <Link to="/component-library" className="nav-link">
-            <h6 className="smaller-text">COMPONENTS</h6>
-          </Link>
+         
           <Link to="/journal" className="nav-link">
             <h6 className="smaller-text">JOURNAL</h6>
           </Link>
-          <Link to="/style-page" className="nav-link">
-            <h6 className="smaller-text">STYLES</h6>
-          </Link>
+       
         </div>
         <div className="navbar-r-container">
           <DarkModeButton />

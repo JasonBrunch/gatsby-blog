@@ -12,11 +12,15 @@
 }
 
 .recent-projects-container h1 {
-    width: 500px;
-    padding: 1rem 8%;
+    width: 100%
+   
 }
 
 @media (min-width: 1200px) {
+    .recent-projects-container h1 {
+        width: 500px;
+        padding: 1rem 8%;
+    }
     .grid-display-section {
         padding: 3rem var(--padding-xlarge);
 

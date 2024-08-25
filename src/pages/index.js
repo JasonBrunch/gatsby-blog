@@ -11,6 +11,8 @@ import NodeIcon from "../assets/node-icon.svg";
 import WordpressIcon from "../assets/wordpress-icon.svg";
 import ButtonCoolShadow from "../components/buttons/button-cool-shadow";
 
+import FullContactForm from "../components/contact/FullContactForm.js";
+
 
 const Home = ({ data }) => {
   // Get the image data using getImage helper function
@@ -97,16 +99,16 @@ const Home = ({ data }) => {
                   urna fermentum accumsan. Vivamus et lectus at arcu rhoncus.
                 </p>
 
-<div className="button-container2">
-                <ButtonCoolShadow title="SEE JOURNAL" />
-                <ButtonCoolShadow title="PROJECTS" />
-              </div>
+                <div className="button-container2">
+                  <ButtonCoolShadow title="SEE JOURNAL" />
+                  <ButtonCoolShadow title="PROJECTS" />
+                </div>
 
 
               </div>
 
 
-              
+
             </div>
 
           </div>
@@ -114,12 +116,13 @@ const Home = ({ data }) => {
 
         </section>
         <Pointer title="PROJECTS" />
-        
+
 
 
 
 
         <GridDisplay />
+        <FullContactForm />
       </div>
     </Layout>
   );

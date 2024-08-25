@@ -18,7 +18,7 @@
   line-height: 20px;
   margin: 0 5px 10px 0;
   overflow: visible;
-  padding: 12px 40px;
+  padding: 12px 30px;
   text-align: center;
   text-transform: none;
   touch-action: manipulation;
@@ -27,7 +27,14 @@
   vertical-align: middle;
   white-space: nowrap;
 
-  width: 200px;
+  width: 100%;
+}
+
+@media(min-width:1200px){
+  .button-50{
+    padding: 12px 40px;
+    width: 200px;
+  }
 }
 
 .button-50:focus {

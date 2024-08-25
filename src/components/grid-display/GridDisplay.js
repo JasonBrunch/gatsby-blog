@@ -43,8 +43,8 @@ const GridDisplay = () => {
   const burgerCoImage = getImage(data.burgerCoImage);
 
   return (
-    <section className="grid-display-section">
-      <div className="recent-projects-container">
+    <section className="grid-display-section ">
+      <div className="recent-projects-container ">
 
         <h1 className="">RECENT PROJECTS</h1>
       
