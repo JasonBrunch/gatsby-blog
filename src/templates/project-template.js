@@ -13,8 +13,8 @@ export default function ProjectTemplate({ data }) {
 
   return (
     <Layout>
-      <div className="project-container">
-        <div className="project-inner-container debug">
+      <div className="project-container ">
+        <div className="project-inner-container">
           {/* Project Image */}
           <div className="project-image-container ">
             <GatsbyImage image={image} alt={project.frontmatter.title} />
@@ -40,33 +40,35 @@ export default function ProjectTemplate({ data }) {
           </div>
 
         </div>
-        <div className="project-inner-container2 debug">
-          <div className="project-heading-container debug">
+        <div className="project-inner-container2 ">
+          <div className="project-inner-inner-container " >
+            <div className="project-heading-container">
+              <h6>IN DETAILS</h6>
+              <h4>DESCRIPTION</h4>
+              <div className="project-content" dangerouslySetInnerHTML={{ __html: project.html }} />
 
-            <h6>IN DETAILS</h6>
-            <h4>DESCRIPTION</h4>
-            <div className="project-content" dangerouslySetInnerHTML={{ __html: project.html }} />
 
-
-            {/* Technologies Section */}
-            <div className="technologies-section">
-              <div className="icons-container">
-                {project.frontmatter.icons.map((icon, index) => (
-                  <img
-                    key={index}
-                    src={icon.publicURL}
-                    alt={project.frontmatter.technologies[index]}
-                    className="tech-icon"
-                  />
-                ))}
+              {/* Technologies Section */}
+              <div className="technologies-section">
+                <div className="icons-container">
+                  {project.frontmatter.icons.map((icon, index) => (
+                    <img
+                      key={index}
+                      src={icon.publicURL}
+                      alt={project.frontmatter.technologies[index]}
+                      className="tech-icon"
+                    />
+                  ))}
+                </div>
               </div>
+
+
             </div>
+          
+
+          <TabsSVG className="project-description-image-container " />
 
           </div>
-
-          <TabsSVG className="debug"/>
-
-
 
 
         </div>
