@@ -1,14 +1,20 @@
 /* grid-display.css */
 
+.grid-display-section {
+    margin-top: 2rem;
+}
+.recent-projects-container h1 {
+    padding-right: 5rem;
+    padding-left: 1rem;
 
-
+}
 
 .recent-projects-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    text-align: center;
+    text-align: left;
 }
 
 .recent-projects-container h1 {
@@ -72,7 +78,7 @@
     border: 1px solid #bababa;
     /* Border for visualization */
     border-radius: 4px;
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.069);
 }
 
 .medium-grid-item {

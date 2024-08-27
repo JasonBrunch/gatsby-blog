@@ -45,9 +45,7 @@ const GridDisplay = () => {
   return (
     <section className="grid-display-section ">
       <div className="recent-projects-container ">
-
         <h1 className="">RECENT PROJECTS</h1>
-      
        <div className="grid-display-main-container">
         <Link to="/projects/project1" className="grid-item medium-grid-item">
           <GatsbyImage image={burgerCoImage} alt="Burger Restaurant" />
@@ -67,7 +65,6 @@ const GridDisplay = () => {
         <div className="grid-item medium-grid-item">Project 6</div>
       </div>
       </div>
-     
     </section>
   );
 };

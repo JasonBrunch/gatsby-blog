@@ -7,6 +7,14 @@
 
     justify-content: center;
     align-items: center;
+
+    height: 100dvh;
+    
+}
+@media(min-width:1200px){
+    .full-contact-container{
+        height: auto;
+    }
 }
 
 .full-contact-inner-container{
@@ -19,6 +27,8 @@
     max-width: 800px;
 
     text-align: center;
+    gap:1.25rem;
+    
 
 }
 

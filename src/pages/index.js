@@ -20,31 +20,34 @@ const Home = ({ data }) => {
     <Layout>
       <div className="home-main-container">
         <section className="home-hero-main-container ">
-          <div className="hero-secondary-containter ">
-            <div className="hero-image">
+          <div className="hero-secondary-containter debug2">
+            <div className="hero-image  ">
               <GatsbyImage image={portrait} alt="Me" className="portrait" />
             </div>
             <div className="hero-text ">
               <h4>Web Developer</h4>
-              <h2>JASON BUNCE</h2>
+              <h2 className="">JASON BUNCE</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
                 gravida lorem quis quam tristique euismod.{" "}
               </p>
             </div>
-            <div className="button-container">
+            <div className="button-container ">
               <ButtonCoolShadow title="CONTACT" color="red" />
-              <ButtonCoolShadow title="SEE PROJECTS" color="transparent" />
+              <ButtonCoolShadow title="ABOUT ME" color="transparent" />
             </div>
           </div>
-   
         </section>
-        <section className="default-container">
+
+
+
+
+        <section className="default-container ">
           <div className="inner-container ">
-            <div className="aboutme-wrapper ">
+            <div className="aboutme-wrapper  ">
               <div className="aboutme-top-container ">
-                <div className="aboutme-top-container-title-wrapper">
-                  <h1 className="">SERVICES & TECH</h1>
+                <div className="aboutme-top-container-title-wrapper ">
+                  <h1 className="">ABOUT ME</h1>
                   <div className="tech-stack-container-large ">
                     <NextIcon className="tech-stack-icon " />
                     <NodeIcon className="tech-stack-icon " />
@@ -67,19 +70,27 @@ const Home = ({ data }) => {
                   non posuere dolor. Vivamus et lectus at arcu rhoncus aliquam.
                   Sed tincidunt, dui ut vulputate interdum, massa sapien sodales
                   metus, a fermentum ex quam vitae nulla. Fusce non urna
-                  eleifend urna fermentum accumsan. Vivamus et lectus at arcu
-                  rhoncus.
+                  eleifend urna fermentum accumsan. 
                 </p>
 
-                <div className="button-container2">
+                <div className="button-container">
                   <ButtonCoolShadow title="SEE JOURNAL" />
-                  <ButtonCoolShadow title="PROJECTS" />
+                  <ButtonCoolShadow title="PROJECTS" color="transparent" />
                 </div>
               </div>
             </div>
           </div>
         </section>
        
+
+
+
+
+
+
+
+
+
 
         <GridDisplay />
         <FullContactForm />

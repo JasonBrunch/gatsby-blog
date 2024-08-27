@@ -8,9 +8,12 @@ const FullContactForm = () => {
         <div className="full-contact-container ">
             <div className="full-contact-inner-container ">
 
+                <div className="full-contact-heading-container">
 
                 <h6>KEEP IN TOUCH</h6>
                 <h3>CONTACT FORM</h3>
+                </div>
+                
                 <p>You can click here to send me an email message via your standard email client, or fill in the fields below.</p>
 
                 <form className="contact-form ">
