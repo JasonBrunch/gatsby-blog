@@ -14,34 +14,26 @@ export default function ProjectTemplate({ data }) {
   return (
     <Layout>
       <div className="project-container ">
-        <div className="project-inner-container">
+        <div className="project-inner-container ">
           {/* Project Image */}
           <div className="project-image-container ">
             <GatsbyImage image={image} alt={project.frontmatter.title} />
           </div>
 
           <div className="project-text-container ">
-
-            {/* Project Title */}
             <h2>{project.frontmatter.title}</h2>
-
-            {/* Description */}
             <p>{project.frontmatter.description}</p>
+          </div>
 
-            {/* Buttons Section */}
-            <div className="button-container2 ">
-              <ButtonCoolShadow
-                text="View Project"
-                link={project.frontmatter.path}
-              />
-              <ButtonCoolShadow text="Contact" link="/contact" />
+            <div className="button-container  ">
+              <ButtonCoolShadow title="LIVE SITE"  />
+              <ButtonCoolShadow title="READ MORE" color="transparent" />
             </div>
 
           </div>
 
-        </div>
-        <div className="project-inner-container2 ">
-          <div className="project-inner-inner-container " >
+        <div className="project-inner-container2 debug">
+          <div className="project-inner-inner-container debug2" >
             <div className="project-heading-container">
               <h6>IN DETAILS</h6>
               <h4>DESCRIPTION</h4>
@@ -66,7 +58,7 @@ export default function ProjectTemplate({ data }) {
             </div>
           
 
-          <TabsSVG className="project-description-image-container " />
+          <TabsSVG className="project-description-image-container debug3 " />
 
           </div>
 
