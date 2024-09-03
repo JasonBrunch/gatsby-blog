@@ -53,6 +53,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       path: String!
       image: File @fileByRelativePath
       technologies: [String!] # Added for project files
+      technologies_description: String! # New field
     }
 
     type MarkdownRemark implements Node {

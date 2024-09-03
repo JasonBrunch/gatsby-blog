@@ -25,48 +25,62 @@ export default function ProjectTemplate({ data }) {
             <p>{project.frontmatter.description}</p>
           </div>
 
-            <div className="button-container  ">
-              <ButtonCoolShadow title="LIVE SITE"  />
-              <ButtonCoolShadow title="READ MORE" color="transparent" />
-            </div>
-
+          <div className="button-container  ">
+            <ButtonCoolShadow title="LIVE SITE" />
+            <ButtonCoolShadow title="READ MORE" color="transparent" />
           </div>
 
-        <div className="project-inner-container2 debug">
-          <div className="project-inner-inner-container debug2" >
+        </div>
+
+        <div className="project-inner-container2 ">
+          <div className="project-inner-inner-container " >
             <div className="project-heading-container">
               <h6>IN DETAILS</h6>
               <h4>DESCRIPTION</h4>
-              <div className="project-content" dangerouslySetInnerHTML={{ __html: project.html }} />
-
-
-              {/* Technologies Section */}
-              <div className="technologies-section">
-                <div className="icons-container">
-                  {project.frontmatter.icons.map((icon, index) => (
-                    <img
-                      key={index}
-                      src={icon.publicURL}
-                      alt={project.frontmatter.technologies[index]}
-                      className="tech-icon"
-                    />
-                  ))}
-                </div>
-              </div>
-
-
             </div>
-          
 
-          <TabsSVG className="project-description-image-container debug3 " />
+            <div className="project-content" dangerouslySetInnerHTML={{ __html: project.html }} />
+
+
+
+
+            <TabsSVG className="project-description-image-container  " />
+              {/* Technologies Section */}
+              <div className="project-heading-container ">
+                <h6>FOR TECH SAVVY</h6>
+                <h4>TECHNOLOGIES</h4>
+              </div>
+              <div className="project-content">
+                 <p>{project.frontmatter.technologies_description}</p>
+              </div>
+             
+
+
+              <div className="icons-container">
+                {project.frontmatter.icons.map((icon, index) => (
+                  <img
+                    key={index}
+                    src={icon.publicURL}
+                    alt={project.frontmatter.technologies[index]}
+                    className="tech-icon"
+                  />
+                ))}
+              </div>
+       
+
 
           </div>
 
 
+         
+
         </div>
-        <ContactForm />
+
+
       </div>
-    </Layout>
+      <ContactForm />
+   
+    </Layout >
   );
 }
 
@@ -86,6 +100,7 @@ export const query = graphql`
         icons {
           publicURL
         }
+        technologies_description 
       }
     }
   }

@@ -1,6 +1,6 @@
 .project-container {
     background-color: rgb(255, 255, 255);
-   
+
 }
 
 @media(min-width: 1200px) {
@@ -20,7 +20,7 @@
 .project-inner-container {
     display: flex;
     flex-direction: column;
-    
+
     align-items: center;
     padding: 7rem var(--padding-small) 2rem var(--padding-small);
     gap: 1.2rem;
@@ -31,7 +31,7 @@
 
 }
 
-.project-text-container{
+.project-text-container {
 
     height: 100%;
 }
@@ -41,17 +41,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 var(--padding-small);
+    padding: 3rem var(--padding-small) 3rem var(--padding-small);
     gap: 0.2rem;
 
     text-align: center;
     width: 100%;
 
 }
+
 .project-inner-container2 {
     width: 100%;
 
-   
+
 }
 
 .project-heading-container {
@@ -62,10 +63,17 @@
 }
 
 
-.project-description-image-container{
-        width: 50px;
-        height: auto;
-    }
+.project-description-image-container {
+    width: 100%;
+    height: auto;
+    margin-bottom: 3rem;
+}
+.project-content{
+    text-align: left;
+}
+
+
+
 @media (min-width:1200px) {
     .project-inner-container {
         padding: 0 var(--padding-xxlarge);
@@ -93,7 +101,7 @@
     }
 
 
-    
+
 
 
 

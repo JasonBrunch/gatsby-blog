@@ -9,6 +9,8 @@ icons:
   - "./nextjs-icon.svg"
   - "./nextjs-icon.svg"
   - "./nextjs-icon.svg"
+technologies_description: "Next.js (React.js) for frontend development with Node.js serverless backend. Firebase integration for real-time database. Finally, the app is deployed/hosted on Vercel.."
+
 ---
 
 
@@ -25,6 +27,3 @@ Finally, the website includes a "Contact" page where visitors can send inquiries
 
 While the restaurant is fictional, the website is fully functional, demonstrating the ability to create a professional and comprehensive web presence for a small business.
 
-#### TECHNOLOGIES
-
-This project uses React, Gatsby, and GraphQL.
