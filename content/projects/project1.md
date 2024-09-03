@@ -2,7 +2,7 @@
 title: "Burger Restaurant"
 description: "A small business website featuring a menu, hours of operation, and Google Maps integration for location and directions."
 path: "/projects/project1"
-image: "./project1-image.png"  # Ensure the image file is in the same directory
+image: "./burger-mockup.png"  # Ensure the image file is in the same directory
 date: "2024-08-20"
 technologies: ["React", "Gatsby", "GraphQL"]
 icons: 
