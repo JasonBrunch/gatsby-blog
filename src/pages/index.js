@@ -20,7 +20,7 @@ const Home = ({ data }) => {
     <Layout>
       <div className="home-main-container">
         <section className="home-hero-main-container ">
-          <div className="hero-secondary-containter debug2">
+          <div className="hero-secondary-containter ">
             <div className="hero-image  ">
               <GatsbyImage image={portrait} alt="Me" className="portrait" />
             </div>
@@ -73,7 +73,7 @@ const Home = ({ data }) => {
                   eleifend urna fermentum accumsan. 
                 </p>
 
-                <div className="button-container">
+                <div className="button-container ">
                   <ButtonCoolShadow title="SEE JOURNAL" />
                   <ButtonCoolShadow title="PROJECTS" color="transparent" />
                 </div>

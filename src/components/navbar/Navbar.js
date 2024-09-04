@@ -43,17 +43,18 @@ const Navbar = ({ data }) => {
   return (
     <div className={`navbar-container ${navbarVisible ? "visible" : "hidden"} `}>
       <div className="navbar">
-        <Logo />
-
+        <Link to="/">
+          <Logo />
+        </Link>
         <div className="nav-links">
           <Link to="/" className="nav-link">
             <h6 className="smaller-text">PORTFOLIO</h6>
           </Link>
-         
+
           <Link to="/journal" className="nav-link">
             <h6 className="smaller-text">JOURNAL</h6>
           </Link>
-       
+
         </div>
         <div className="navbar-r-container">
           <DarkModeButton />

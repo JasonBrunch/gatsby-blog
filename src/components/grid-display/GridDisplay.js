@@ -46,24 +46,24 @@ const GridDisplay = () => {
     <section className="grid-display-section ">
       <div className="recent-projects-container ">
         <h1 className="">RECENT PROJECTS</h1>
-       <div className="grid-display-main-container">
-        <Link to="/projects/project1" className="grid-item medium-grid-item">
-          <GatsbyImage image={burgerCoImage} alt="Burger Restaurant" />
-        </Link>
-        <Link to="/projects/project1" className="grid-item medium-grid-item">
-          <GatsbyImage image={creeklifeImage} alt="Creek Life" />
-        </Link>
-        <Link to="/projects/project1" className="grid-item medium-grid-item">
-          <GatsbyImage image={componentImage} alt="Component Library" />
-        </Link>
-        <Link to="/projects/project1" className="grid-item medium-grid-item">
-          <GatsbyImage image={wizardImage} alt="Wizard Hunter" />
-        </Link>
-        <Link to="/projects/project1" className="grid-item medium-grid-item">
-          <GatsbyImage image={dayforgeImage} alt="Dayforge" />
-        </Link>
-        <div className="grid-item medium-grid-item">Project 6</div>
-      </div>
+        <div className="grid-display-main-container">
+          <Link to="/projects/project1" className="grid-item medium-grid-item">
+            <GatsbyImage image={burgerCoImage} alt="Burger Restaurant" />
+          </Link>
+          <Link to="/projects/project2" className="grid-item medium-grid-item">
+            <GatsbyImage image={wizardImage} alt="Wizard Hunter" />
+          </Link>
+          <Link to="/projects/project3" className="grid-item medium-grid-item">
+            <GatsbyImage image={dayforgeImage} alt="Dayforge" />
+          </Link>
+          <Link to="/projects/project1" className="grid-item medium-grid-item">
+            <GatsbyImage image={creeklifeImage} alt="Creek Life" />
+          </Link>
+          <Link to="/projects/project1" className="grid-item medium-grid-item">
+            <GatsbyImage image={componentImage} alt="Component Library" />
+          </Link>
+          <div className="grid-item medium-grid-item">Project 6</div>
+        </div>
       </div>
     </section>
   );
