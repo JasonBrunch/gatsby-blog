@@ -38,12 +38,7 @@ export default function ProjectTemplate({ data }) {
               <h6>IN DETAILS</h6>
               <h4>DESCRIPTION</h4>
             </div>
-
             <div className="project-content" dangerouslySetInnerHTML={{ __html: project.html }} />
-
-
-
-
             <TabsSVG className="project-description-image-container  " />
               {/* Technologies Section */}
               <div className="project-heading-container ">
