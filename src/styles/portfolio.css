@@ -29,11 +29,7 @@
     padding: 5% var(--padding-small) 6% var(--padding-small);
     gap: 3%;
 }
-@media(min-height: 900px){
-    .hero-secondary-containter{
-        padding-top: 15%;
-    }
-}
+
 .hero-image {
     width: 100%;
     display: flex;
@@ -48,7 +44,18 @@
     align-items: center;
     text-align: center;
     height: 100%;
+
 }
+@media(min-height: 900px){
+    .hero-secondary-containter{
+        padding-top: 20%;
+        padding-bottom: 8%;
+    }
+    .hero-text{
+        padding-top: 5%;
+    }
+}
+
 
 .hero-text h4,
 .hero-text h2,

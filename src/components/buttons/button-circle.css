@@ -1,9 +1,16 @@
 .button-circle {
     appearance: button;
-    height: 50px;
-    width: 50px;
-    background-color: red;
-    border: 1px solid #000;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(17, 17, 17);
+
     border-radius: 50%;
-    position: absolute; /* Allow positioning anywhere */
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensures the icon doesn't overflow */
+    padding: 0;
+    margin: 0;
   }
+
