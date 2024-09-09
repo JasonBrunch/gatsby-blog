@@ -75,7 +75,8 @@ const DynamicPortrait = ({image}) => {
       </svg>
 
       {/* Place the ButtonCircle */}
-      <ButtonCircle style={buttonStyle} onClick={SettingsBtnClick}  />
+      <ButtonCircle style={buttonStyle} onClick={SettingsBtnClick} iconType="cog" />
+      <ButtonCircle style={buttonStyle} onClick={SettingsBtnClick} iconType="tree" />
     </div>
   );
 };
