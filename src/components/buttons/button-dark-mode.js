@@ -16,7 +16,7 @@ const DarkModeButton = ({ style }) => { // Destructure 'style' properly
   return (
     <button className="toggle-theme-button" style={style} onClick={handleClick}>
       <div className={`sushine-container ${isAnimating ? "animate-rays" : ""}`}>
-        <SunshineSVG className="sunshine-svg" />
+        <SunshineSVG className="sunshine-svg " />
       </div>
     </button>
   );

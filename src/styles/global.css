@@ -14,7 +14,7 @@
   --email-link-hover: var(--brand-color);
   /*light theme colors*/
   --background-color-light: #ffffff;
-
+  --button-background-black: #111111;
   --border-color: #505050;
 
   --red-color: rgb(255 70 84/1);
@@ -112,7 +112,12 @@ h2 {
 
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
-
+@media(min-width: 400px){
+  h2{
+    font-size: 3.1rem;
+    line-height: 3.1rem;
+  }
+}
 h3 {
   font-size: 2.4rem;
   line-height: 2.4rem;

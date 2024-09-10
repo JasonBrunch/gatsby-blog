@@ -18,10 +18,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20% var(--padding-small) 2rem var(--padding-small);
+    padding: 30% var(--padding-small) 2rem var(--padding-small);
     gap: 1.5rem;
     text-align: center;
     height: 100dvh;
+
 }
 @media(max-height: 675px){
     .project-inner-container{
@@ -34,6 +35,8 @@
 .project-text-container {
 
     height: 100%;
+  
+    
 }
 
 .project-inner-container2 {

@@ -12,10 +12,11 @@ const DynamicPortrait = ({ image }) => {
   const [settingsAngle, setSettingsAngle] = useState(2.2); // Initial angle for settings button
   const [treeAngle, setTreeAngle] = useState(2.2); // Initial angle for tree button
   const [darkModeAngle, setDarkModeAngle] = useState(2.2);
+  const [spiderAngle, setSpiderAngle] = useState(2.2);
   const [isAnimating, setIsAnimating] = useState(false);
   const treeBtnAngleTarget = 1.9;
   const darkBtnAngleTarget = 1.6;
-  
+  const spiderBtnAngleTarget = 1.3;
 
   useEffect(() => {
     // Calculate the circle's radius and center based on the image size
@@ -81,6 +82,22 @@ const DynamicPortrait = ({ image }) => {
 
     requestAnimationFrame(animate);
   };
+  const animateSpiderButton = (startAngle, endAngle) => {
+    let currentAngle = startAngle;
+
+    const animate = () => {
+      if (currentAngle > endAngle) {
+        currentAngle -= 0.02; // Adjust increment for faster or smoother animation
+        setSpiderAngle(currentAngle);
+        requestAnimationFrame(animate);
+      } else {
+        setSpiderAngle(endAngle); // Ensure it lands exactly on the target
+        setIsAnimating(false);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  };
 
   // On settings button click, animate the tree button
   const SettingsBtnClick = () => {
@@ -88,10 +105,14 @@ const DynamicPortrait = ({ image }) => {
     setIsAnimating(true);
     animateTreeButton(treeAngle, treeBtnAngleTarget);
     animateDarkButton(darkModeAngle, darkBtnAngleTarget);
+    animateSpiderButton(spiderAngle, spiderBtnAngleTarget);
   };
 
   const TreeBtnClick = () => {
     console.log("Tree button clicked!");
+  };
+  const SpiderBtnClick = () => {
+    console.log("Spider button clicked!");
   };
 
   // Calculate button positions based on angles
@@ -114,12 +135,18 @@ const DynamicPortrait = ({ image }) => {
     center.y,
     darkModeAngle
   );
+  const spiderButtonStyle = calculateButtonPosition(
+    circleRadius,
+    center.x,
+    center.y,
+    spiderAngle
+  );
 
   return (
     <div className="hero-image  ">
       <GatsbyImage image={image} alt="Me" className="portrait " />
 
-      {/* Visualize the circle using SVG */}
+      {/* Visualize the circle using SVG 
       <svg
         style={{ position: "absolute", top: 0, left: 0, pointerEvents: "none" }}
         width="100%"
@@ -134,7 +161,8 @@ const DynamicPortrait = ({ image }) => {
           fill="none"
         />
       </svg>
-
+      */}
+      
       {/* Place the ButtonCircle */}
       <ButtonCircle
         style={settingsButtonStyle}
@@ -146,10 +174,12 @@ const DynamicPortrait = ({ image }) => {
         onClick={TreeBtnClick}
         iconType="tree"
       />
-      <DarkModeBtn
-        style={darkButtonStyle}
-        
+      <DarkModeBtn style={darkButtonStyle} />
 
+      <ButtonCircle
+        style={spiderButtonStyle}
+        onClick={SpiderBtnClick}
+        iconType="spider"
       />
     </div>
   );

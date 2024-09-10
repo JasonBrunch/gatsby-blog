@@ -1,25 +1,30 @@
 .toggle-theme-button {
+
+    appearance: none; /* Remove native button styling */
+    border: none;     /* Remove default border */
+    outline: none;    /* Remove focus outline */
+    background: none; /* Remove background color */
+    padding: 0;       /* Remove default padding */
+    margin: 0;        /* Remove default margin */
+    
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    background-color: rgb(17, 17, 17);
-    
+    background-color: var(--button-background-black);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden; /* Ensures the icon doesn't overflow */
-    padding: 0;
-    margin: 0;
     position: absolute;
     z-index: 8;
 }
-
-
-
 .sunshine-svg {
-    width: 34px;
-    height: 34px;
+    width: 24px;
+    height: 24px;
+    transform: translateY(2px);
+
+    
 }
 #Star1, #Star2, #Star3{
     opacity: 0;
