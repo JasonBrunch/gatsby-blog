@@ -14,3 +14,10 @@
     margin: 0;
   }
 
+  .button-circle.cog{
+    z-index: 10;
+  }
+  .button-circle.tree{
+    z-index: 9;
+  }
+

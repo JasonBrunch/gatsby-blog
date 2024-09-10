@@ -33,8 +33,10 @@ const ButtonCircle = ({ style, onClick, iconType }) => {
     }
   };
 
+  const buttonClass = `button-circle ${iconType}`;
+
   return (
-    <button className="button-circle" style={style} onClick={onClick}>
+    <button className={buttonClass} style={style} onClick={onClick}>
       {renderIcon()}
     </button>
   );

@@ -4,11 +4,9 @@ import ThemeContext from "../../context/ThemeContext";
 import SunshineSVG from "../../assets/sunshine.svg";
 import "./button-dark-mode.css";
 
-const DarkModeButton = () => {
+const DarkModeButton = ({ style }) => { // Destructure 'style' properly
   const { toggleTheme } = useContext(ThemeContext);
   const [isAnimating, setIsAnimating] = useState(false);
-
-  
 
   const handleClick = () => {  
     setIsAnimating(!isAnimating);
@@ -16,7 +14,7 @@ const DarkModeButton = () => {
   };
 
   return (
-    <button className="toggle-theme-button" onClick={handleClick}>
+    <button className="toggle-theme-button" style={style} onClick={handleClick}>
       <div className={`sushine-container ${isAnimating ? "animate-rays" : ""}`}>
         <SunshineSVG className="sunshine-svg" />
       </div>

@@ -41,7 +41,9 @@ const Navbar = ({ data }) => {
   };
 
   return (
-    <div className={`navbar-container ${navbarVisible ? "visible" : "hidden"} `}>
+    <div
+      className={`navbar-container ${navbarVisible ? "visible" : "hidden"} `}
+    >
       <div className="navbar">
         <Link to="/">
           <Logo />
@@ -54,10 +56,11 @@ const Navbar = ({ data }) => {
           <Link to="/journal" className="nav-link">
             <h6 className="smaller-text">JOURNAL</h6>
           </Link>
-
         </div>
         <div className="navbar-r-container">
+          {/* 
           <DarkModeButton />
+          */}
           <ButtonGlow
             text="GET IN TOUCH"
             onClick="/contact-page"
