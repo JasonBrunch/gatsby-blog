@@ -32,11 +32,11 @@ const Home = ({ data }) => {
 
 
         <section className="home-hero-main-container ">
-          <div className="hero-secondary-containter  ">
+          <div className="hero-secondary-containter ">
        
             <DynamicPortrait image={portrait}/>
 
-            <div className="hero-text ">
+            <div className="hero-text  ">
               <h4>Web Developer</h4>
               <h2 className="">JASON BUNCE</h2>
               <p>

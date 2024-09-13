@@ -10,7 +10,7 @@
  
   box-shadow: #000000 4px 4px 0 0,#000 4px 4px 0 1px;
   box-sizing: border-box;
-  color: #000000;
+  color: #181818;
   cursor: pointer;
   display: inline-block;
   font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
@@ -29,6 +29,7 @@
   white-space: nowrap;
 
   width: 100%;
+  letter-spacing: -0.025em;
 }
 
 @media(min-width:1200px){

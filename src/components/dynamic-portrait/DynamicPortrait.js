@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import ButtonCircle from "../buttons/button-circle";
 import DarkModeBtn from "../buttons/button-dark-mode";
 import TreeSVG from "../../assets/tree.svg";
+import Tree from "../trees/Tree";
 
 const DynamicPortrait = ({ image }) => {
   const [circleRadius, setCircleRadius] = useState(0);
@@ -14,12 +15,15 @@ const DynamicPortrait = ({ image }) => {
   const [darkModeAngle, setDarkModeAngle] = useState(2.2);
   const [spiderAngle, setSpiderAngle] = useState(2.2);
   const [isAnimating, setIsAnimating] = useState(false);
-  const [treeButtonPressed, setTreeButtonPressed] = useState(false); // State to track if the tree button is pressed
-  const [treePosition, setTreePosition] = useState(null);
+  
+  const [currentTreeIndex, setCurrentTreeIndex] = useState(0);
+
+  const [treePositions, setTreePositions] = useState([]); 
+  
   const treeBtnAngleTarget = 1.9;
   const darkBtnAngleTarget = 1.6;
   const spiderBtnAngleTarget = 1.3;
-  const firstTreeAngle = 4.69;
+  const treeAngles = [4.69, 5.2, 5.7, 4.4, 4, 4.5, 5.34, 4.85, 5];
 
   useEffect(() => {
     // Calculate both the scaled and unscaled circle's radius and center based on the image size
@@ -35,7 +39,7 @@ const DynamicPortrait = ({ image }) => {
       const centerY = rect.top + rect.height / 2;
 
       // Scaled circle (for positioning the buttons)
-      const scalingFactor = 1.15; // Increase circle size by 15%
+      const scalingFactor = 1.2; // Increase circle size by 15%
       const buttonRadius = mainRadius * scalingFactor;
 
       setUnscaledCircleRadius(mainRadius);
@@ -118,19 +122,24 @@ const DynamicPortrait = ({ image }) => {
   };
 
   // Calculate the position of the tree along the unscaled circle
+
   const calculateTreePosition = (angle) => {
-    const x = center.x + unscaledCircleRadius * Math.cos(angle) ;
+    const x = center.x + unscaledCircleRadius * Math.cos(angle);
     const y = center.y + unscaledCircleRadius * Math.sin(angle);
-    return { x, y };
+  
+    // Calculate the rotation angle to face outward (convert radians to degrees)
+    const rotationAngle = (angle * 180) / Math.PI + 90; // +90 to adjust for upward facing
+  
+    return { x, y, rotationAngle };
   };
+
   const TreeBtnClick = () => {
-    console.log("Tree button clicked!");
-    if (!treeButtonPressed) {
-      const position = calculateTreePosition(firstTreeAngle);
-      setTreePosition(position);
-      setTreeButtonPressed(true); // Trigger the tree drawing
+    if (currentTreeIndex < treeAngles.length) {
+      const position = calculateTreePosition(treeAngles[currentTreeIndex]);
+      setTreePositions([...treePositions, position]);
+      setCurrentTreeIndex(currentTreeIndex + 1); // Move to next tree angle
     } else {
-      console.log("TREE ALREADY PRESSED");
+      console.log("No more trees can be placed!");
     }
   };
   const SpiderBtnClick = () => {
@@ -165,7 +174,7 @@ const DynamicPortrait = ({ image }) => {
   );
 
   return (
-    <div className="hero-image">
+    <div className="hero-image ">
       <GatsbyImage image={image} alt="Me" className="portrait" />
 
       <svg
@@ -184,28 +193,12 @@ const DynamicPortrait = ({ image }) => {
           style={{ pointerEvents: "none" }}
         />
         {/* Draw the visual markers */}
-        
       </svg>
 
-      {treeButtonPressed && treePosition && (
-      <div
-      style={{
-        position: "absolute",
-        left: treePosition.x,
-        top: treePosition.y,
-        width: '50px',  // Width of the SVG
-        height: '50px', // Height of the SVG
-        border: '1px solid red', // Border for visualization
-        transform: 'translate(-50%, -100%)', // Adjust to place bottom middle of the SVG at the position
-        transformOrigin: 'bottom center' // Ensure the transform is based on the bottom center of the div
-      }}
-    >
-      <TreeSVG width="50" height="50" />
-    </div>
-    )}
-
-
-
+       {/* Render all the trees */}
+       {treePositions.map((position, index) => (
+        <Tree key={index} treePosition={position} />
+      ))}
 
       <ButtonCircle
         style={settingsButtonStyle}
