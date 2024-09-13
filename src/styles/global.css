@@ -1,5 +1,6 @@
 /*importing fonts here the best */
 @import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
 /* src/styles/global.css */
 /* Global style settings */
@@ -8,7 +9,7 @@
   --color-background: #d8d8d8;
   --brand-color: #e54927;
   --dark-text: #222222;
-  --medium-text: #677282;
+  --medium-text: #5a626e;
   --light-text: #7e899a;
   --email-link-color: #ee3c21;
   --email-link-hover: var(--brand-color);
@@ -91,7 +92,7 @@ h6,
 p,
 .smaller-text,
 .smallest-text {
-  font-family: "almarai", sans-serif;
+  font-family: "Quicksand", sans-serif;
   margin: 0;
   padding: 0;
   color: var(--dark-text);
@@ -112,10 +113,23 @@ h2 {
 
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
-@media(min-width: 400px){
-  h2{
+
+p {
+  font-size: 1.05rem;
+  line-height: 1.6rem;
+  font-weight: 500;
+  color: var(--medium-text);
+
+}
+
+
+
+
+@media (min-width: 400px) {
+  h2 {
     font-size: 3.1rem;
     line-height: 3.1rem;
+    letter-spacing: -0.025em;
   }
 }
 h3 {
@@ -146,9 +160,6 @@ p {
   font-size: 1.05rem;
   line-height: 1.6rem;
 
-  font-family: "Spline Sans", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 .smaller-text {
