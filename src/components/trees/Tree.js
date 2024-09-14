@@ -6,9 +6,11 @@ const Tree = ({ treePosition }) => {
   const [isGrowing, setIsGrowing] = useState(false);
   const [treeSize, setTreeSize] = useState(50); // Default size of 50px
 
-  // Generate a random size for the tree between 40px and 60px when the component mounts
+  // Generate a random size for the tree between 30px and 70px when the component mounts
   useEffect(() => {
-    const randomSize = Math.floor(Math.random() * 21) + 40; // Random size between 40 and 60
+    const minSize = 30;
+    const maxSize = 70;
+    const randomSize = Math.floor(Math.random() * (maxSize - minSize + 1)) + minSize; // Random size between 30 and 70
     setTreeSize(randomSize);
     setIsGrowing(true);
   }, []);

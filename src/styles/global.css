@@ -5,55 +5,78 @@
 /* src/styles/global.css */
 /* Global style settings */
 :root {
-  --background-color: #b75ac8;
-  --color-background: #d8d8d8;
+  /* Colors for both themes */
+  --background-color-light: #ffffff; /* Light mode background */
+  --background-color-dark: #0e0d0d; /* Dark mode background */
+
   --brand-color: #e54927;
-  --dark-text: #222222;
-  --medium-text: #5a626e;
-  --light-text: #7e899a;
-  --email-link-color: #ee3c21;
-  --email-link-hover: var(--brand-color);
-  /*light theme colors*/
-  --background-color-light: #ffffff;
+
+  /* Text colors for light mode */
+  --light-dark-text: #222222; /* Dark text in light mode */
+  --light-medium-text: #5a626e; /* Medium text in light mode */
+  --light-light-text: #7e899a; /* Light text in light mode */
+
+  /* Text colors for dark mode */
+  --dark-dark-text: #ffffff; /* Light text in dark mode */
+  --dark-medium-text: #c2c2c2; /* Medium light text in dark mode */
+  --dark-light-text: #a1a1a1; /* Lighter text in dark mode */
+
+  /* Default text colors */
+  --dark-text: var(--light-dark-text); /* Default to light mode text colors */
+  --medium-text: var(--light-medium-text);
+  --light-text: var(--light-light-text);
+
   --button-background-black: #111111;
   --border-color: #505050;
+  --red-color: rgb(255, 70, 84);
 
-  --red-color: rgb(255 70 84/1);
-
-  /*dark theme colors*/
-  --background-color-dark: #771ae9;
-
-  /*GLOBAL PADDING*/
+  /* Padding */
   --padding-xxlarge: 10%;
   --padding-xlarge: 8%;
   --padding-small: 1.8rem;
-
   --padding-navbar: ;
-}
-
-/*global padding and margin and width*/
-:root {
   --large-width: 90%;
+  /* Set the default background color for the transition */
+  --background-color: var(--background-color-light); /* Default */
 }
 
-/* Set the root element to take up the full width and height of the viewport */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 html,
 body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: var(--background-color); /* Background linked to theme */
+  transition: background-color 1.5s ease-in-out; /* Smooth transition */
+}
+/* Light theme */
+.light-theme {
+  --background-color: var(--background-color-light);
+
+  /* Use light theme text colors */
+  --dark-text: var(--light-dark-text);
+  --medium-text: var(--light-medium-text);
+  --light-text: var(--light-light-text);
 }
 
-/* Set the background color to red */
-body {
-  background-color: var(--background-color);
-  transition: background-color 0.5s ease; /* Add transition for smooth change */
-}
+/* Dark theme */
+.dark-theme {
+  --background-color: var(--background-color-dark);
 
-body {
-  display: flex;
-  flex-direction: column;
+  /* Use dark theme text colors */
+  --dark-text: var(--dark-dark-text);
+  --medium-text: var(--dark-medium-text);
+  --light-text: var(--dark-light-text);
 }
 
 #root,
@@ -108,11 +131,9 @@ h1 {
 h2 {
   font-size: 2.7rem;
   line-height: 2.7rem;
-
   font-family: "Spline Sans", sans-serif;
   font-weight: 700;
   font-style: normal;
-
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -121,11 +142,7 @@ p {
   line-height: 1.6rem;
   font-weight: 500;
   color: var(--medium-text);
-
 }
-
-
-
 
 @media (min-width: 400px) {
   h2 {
@@ -161,7 +178,6 @@ h6 {
 p {
   font-size: 1.05rem;
   line-height: 1.6rem;
-
 }
 
 .smaller-text {

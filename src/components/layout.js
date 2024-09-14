@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import Navbar from "./navbar/Navbar";
 import Footer from "./footer/Footer";
 
+
 import { ThemeProvider } from "../context/ThemeContext";
 
 const Layout = ({ children }) => (
@@ -13,6 +14,8 @@ const Layout = ({ children }) => (
       <Helmet>
         <link rel="stylesheet" href="https://use.typekit.net/zcl7ttz.css" />
       </Helmet>
+      {/* Add overlay here */}
+   
       <Navbar />
       {children}
       <Footer />

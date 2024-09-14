@@ -1,11 +1,18 @@
 .home-main-container {
-    background-color: var(--background-color);
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     width: 100%;
     height: auto;
     box-sizing: border-box;
+
+    position: relative; /* Needed for absolute positioning of overlay */
+    overflow: hidden; /* Ensures no overflow during animation */
 }
+
+
+
+
 
 .home-hero-main-container {
     height: 100dvh;
@@ -25,7 +32,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     justify-content: flex-end;
     padding: 0% var(--padding-small) 6% var(--padding-small);
     gap: 3%;

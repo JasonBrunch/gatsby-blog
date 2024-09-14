@@ -1,4 +1,3 @@
-// src/context/ThemeContext.js
 import React, { createContext, useState, useEffect } from 'react';
 
 const ThemeContext = createContext();
@@ -14,15 +13,18 @@ export const ThemeProvider = ({ children }) => {
 
   const applyTheme = (theme) => {
     const root = document.documentElement;
+  
+    // Update the theme class
     if (theme === 'light') {
-      root.style.setProperty('--background-color', 'var(--background-color-light)');
-     
-      // Apply other light mode variables
+      root.classList.remove('dark-theme');
+      root.classList.add('light-theme');
     } else {
-      root.style.setProperty('--background-color', 'var(--background-color-dark)');
-   
-      // Apply other dark mode variables
+      root.classList.remove('light-theme');
+      root.classList.add('dark-theme');
     }
+  
+    // Smooth transition effect on the background color
+    root.style.transition = 'background-color 1.5s ease-in-out';
   };
 
   const toggleTheme = () => {

@@ -39,7 +39,7 @@ const DynamicPortrait = ({ image }) => {
       const centerY = rect.top + rect.height / 2;
 
       // Scaled circle (for positioning the buttons)
-      const scalingFactor = 1.2; // Increase circle size by 15%
+      const scalingFactor = 1.2;
       const buttonRadius = mainRadius * scalingFactor;
 
       setUnscaledCircleRadius(mainRadius);

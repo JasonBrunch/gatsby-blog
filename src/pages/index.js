@@ -16,15 +16,10 @@ import FullContactForm from "../components/contact/FullContactForm.js";
 
 import DynamicPortrait from "../components/dynamic-portrait/DynamicPortrait.js";
 
-
-
-
 const Home = ({ data }) => {
   // Get the image data using getImage helper function
   const portrait = getImage(data.image1.childImageSharp.gatsbyImageData);
   const coding = getImage(data.image2.childImageSharp.gatsbyImageData);
-
-
 
   return (
     <Layout>
@@ -33,8 +28,7 @@ const Home = ({ data }) => {
 
         <section className="home-hero-main-container ">
           <div className="hero-secondary-containter ">
-       
-            <DynamicPortrait image={portrait}/>
+            <DynamicPortrait image={portrait} />
 
             <div className="hero-text  ">
               <h4>Web Developer</h4>
