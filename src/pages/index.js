@@ -21,11 +21,13 @@ const Home = ({ data }) => {
   const portrait = getImage(data.image1.childImageSharp.gatsbyImageData);
   const coding = getImage(data.image2.childImageSharp.gatsbyImageData);
 
+  const aboutMeBtnClick = () => {
+    console.log("CLICK CLICK CLICK about me");
+  };
+
   return (
     <Layout>
       <div className="home-main-container">
-
-
         <section className="home-hero-main-container ">
           <div className="hero-secondary-containter ">
             <DynamicPortrait image={portrait} />
@@ -40,42 +42,43 @@ const Home = ({ data }) => {
             </div>
             <div className="button-container  ">
               <ButtonCoolShadow title="CONTACT" color="red" />
-              <ButtonCoolShadow title="ABOUT ME" color="transparent" />
+              <ButtonCoolShadow
+                title="ABOUT ME"
+                color="transparent"
+                onClick={aboutMeBtnClick} 
+              />
             </div>
           </div>
         </section>
 
-        <section className="default-container ">
+        <section className="aboutme-main-container">
           <div className="inner-container ">
-            <div className="aboutme-wrapper  ">
-              <div className="aboutme-top-container ">
-                <div className="aboutme-top-container-title-wrapper ">
-                  <h1 className="">ABOUT ME</h1>
-                  <div className="tech-stack-container-large ">
-                    <NextIcon className="tech-stack-icon " />
-                    <NodeIcon className="tech-stack-icon " />
-                    <WordpressIcon className="tech-stack-icon " />
-                    <WordpressIcon className="tech-stack-icon " />
-                  </div>
-                </div>
-                <GatsbyImage image={coding} alt="Coding" className="portrait" />
+            <div className="aboutme-top-container">
+              <div className="aboutme-top-container-title-wrapper ">
+                <h1 className="">ABOUT ME</h1>
               </div>
-              <div className="aboutme-bottom-container">
-                <h5 className="">WEB DEVELOPER | WEB DESIGNER</h5>
-                <div className="tech-stack-container ">
-                  <NextIcon className="tech-stack-icon " />
-                  <NodeIcon className="tech-stack-icon " />
-                  <WordpressIcon className="tech-stack-icon " />
-                  <WordpressIcon className="tech-stack-icon " />
-                </div>
-                <p className="">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                  non posuere dolor. Vivamus et lectus at arcu rhoncus aliquam.
-                  Sed tincidunt, dui ut vulputate interdum, massa sapien sodales
-                  metus, a fermentum ex quam vitae nulla. Fusce non urna
-                  eleifend urna fermentum accumsan.
-                </p>
-
+              <GatsbyImage image={coding} alt="Coding" className="portrait" />
+            </div>
+            <div className="aboutme-bottom-container ">
+              <h5 className="">WEB DEVELOPER | WEB DESIGNER</h5>
+              <div className="tech-stack-container">
+                <NextIcon className="tech-stack-icon " />
+                <NodeIcon className="tech-stack-icon " />
+                <WordpressIcon className="tech-stack-icon " />
+                <WordpressIcon className="tech-stack-icon " />
+              </div>
+              <p className="">
+                As a professional freelancer specialized in web design, SEO, and
+                web development, I create state-of-the-art digital solutions
+                with a focus on your needs. Examples are: regular business
+                websites, applications for administrative purposes (e.g.
+                selecting personnel for certain tasks), webshops, food delivery
+                web applications, CRMs, and more. In other words: anything that
+                needs to appear on the screen to increase your business'
+                efficiency and/or attract more users, ultimately generating more
+                revenue.
+              </p>
+              <div className="aboutme-button-container-wrapper ">
                 <div className="button-container ">
                   <ButtonCoolShadow title="SEE JOURNAL" />
                   <ButtonCoolShadow title="PROJECTS" color="transparent" />

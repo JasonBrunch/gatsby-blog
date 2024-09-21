@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import ButtonCircle from "../buttons/button-circle";
 import DarkModeBtn from "../buttons/button-dark-mode";
-import TreeSVG from "../../assets/tree.svg";
 import Tree from "../trees/Tree";
 
 const DynamicPortrait = ({ image }) => {
@@ -180,7 +179,7 @@ const DynamicPortrait = ({ image }) => {
       <svg
         width="100%"
         height="100%"
-        style={{ position: "absolute", top: 0, left: 0 }}
+        style={{ position: "absolute", top: 0, left: 0, zIndex: 0 }}
       >
         {/* Draw the circle */}
         <circle

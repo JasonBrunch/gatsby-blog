@@ -21,7 +21,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 12px 20px;
-    background-color: var(--background-color-light);
+    background-color: var(--background-color);
     width: 100%; 
     /*
     box-shadow: 0 6px 14px 0 rgba(36, 41, 45, 0.05);
@@ -89,6 +89,10 @@
   border: none;
   padding: 0;
   cursor: pointer;
+}
+#hamburger-menu svg path {
+  fill: var(--dark-text);
+  transition: fill 1s ease;
 }
 @media (max-width:768px){
   .nav-links{
