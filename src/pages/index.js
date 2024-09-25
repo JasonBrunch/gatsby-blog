@@ -1,5 +1,5 @@
 import * as React from "react";
-
+import { Link } from "gatsby";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
@@ -9,7 +9,6 @@ import "../styles/portfolio.css";
 import NextIcon from "../assets/nextjs-icon.svg";
 import NodeIcon from "../assets/node-icon.svg";
 import WordpressIcon from "../assets/wordpress-icon.svg";
-import TreeSVG from "../assets/tree.svg";
 
 import ButtonCoolShadow from "../components/buttons/button-cool-shadow";
 import FullContactForm from "../components/contact/FullContactForm.js";
@@ -22,7 +21,22 @@ const Home = ({ data }) => {
   const coding = getImage(data.image2.childImageSharp.gatsbyImageData);
 
   const aboutMeBtnClick = () => {
-    console.log("CLICK CLICK CLICK about me");
+    const aboutMeSection = document.querySelector(".aboutme-main-container");
+    if (aboutMeSection) {
+      aboutMeSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  const contactBtnClick = () => {
+    const contactSection = document.querySelector("#contact-section");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  const projectsBtnClick = () => {
+    const projectSection = document.querySelector("#projects-section");
+    if (projectSection) {
+      projectSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -41,11 +55,15 @@ const Home = ({ data }) => {
               </p>
             </div>
             <div className="button-container  ">
-              <ButtonCoolShadow title="CONTACT" color="red" />
+              <ButtonCoolShadow
+                title="CONTACT"
+                color="red"
+                onClick={contactBtnClick}
+              />
               <ButtonCoolShadow
                 title="ABOUT ME"
                 color="transparent"
-                onClick={aboutMeBtnClick} 
+                onClick={aboutMeBtnClick}
               />
             </div>
           </div>
@@ -80,16 +98,21 @@ const Home = ({ data }) => {
               </p>
               <div className="aboutme-button-container-wrapper ">
                 <div className="button-container ">
-                  <ButtonCoolShadow title="SEE JOURNAL" />
-                  <ButtonCoolShadow title="PROJECTS" color="transparent" />
+                  <Link to="/journal" className="button-wrapper">
+                    <ButtonCoolShadow title="SEE JOURNAL" />
+                  </Link>
+                  <ButtonCoolShadow title="PROJECTS" color="transparent" onClick={projectsBtnClick} />
                 </div>
               </div>
             </div>
           </div>
         </section>
-
-        <GridDisplay />
-        <FullContactForm />
+        <section id="projects-section">
+          <GridDisplay />
+        </section>
+        <section id="contact-section">
+          <FullContactForm />
+        </section>
       </div>
     </Layout>
   );

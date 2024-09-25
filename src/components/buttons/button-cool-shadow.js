@@ -14,8 +14,7 @@ const ButtonCoolShadow = ({ title, color, onClick }) => {
         backgroundColor: colorOptions[color] || colorOptions.red
     };
 
-    // Add a console log to check if `onClick` is defined
-    console.log("onClick prop in ButtonCoolShadow:", onClick);
+  
 
     return (
         <button 
