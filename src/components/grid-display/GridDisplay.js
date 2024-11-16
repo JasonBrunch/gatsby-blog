@@ -17,7 +17,7 @@ const GridDisplay = () => {
           gatsbyImageData(width: 1920, quality: 100, layout: CONSTRAINED)
         }
       }
-      creeklifeImage: file(relativePath: {eq: "creek-life.png"}) {
+      electionQuizImage: file(relativePath: {eq: "election-quiz.png"}) {
         childImageSharp{
           gatsbyImageData(width: 1920, quality: 100, layout: CONSTRAINED)
         }
@@ -38,7 +38,7 @@ const GridDisplay = () => {
   // Get the image data using getImage helper function
   const componentImage = getImage(data.componentLibraryImage);
   const wizardImage = getImage(data.wizardHunterImage);
-  const creeklifeImage = getImage(data.creeklifeImage);
+  const electionQuizImage = getImage(data.electionQuizImage);
   const dayforgeImage = getImage(data.dayforgeImage);
   const burgerCoImage = getImage(data.burgerCoImage);
 
@@ -56,8 +56,8 @@ const GridDisplay = () => {
           <Link to="/projects/project3" className="grid-item medium-grid-item">
             <GatsbyImage image={dayforgeImage} alt="Dayforge" />
           </Link>
-          <Link to="/projects/project1" className="grid-item medium-grid-item">
-            <GatsbyImage image={creeklifeImage} alt="Creek Life" />
+          <Link to="/projects/project4" className="grid-item medium-grid-item">
+            <GatsbyImage image={electionQuizImage} alt="Election Quiz" />
           </Link>
           <Link to="/projects/project1" className="grid-item medium-grid-item">
             <GatsbyImage image={componentImage} alt="Component Library" />
